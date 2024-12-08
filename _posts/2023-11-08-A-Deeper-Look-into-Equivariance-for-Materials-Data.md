@@ -9,7 +9,7 @@ tags:
   - Molecules
 ---
 
-A Comparative Analysis of an E(3) Equivariant GNN and a Non-Equivariant GNN in Materials Data Tasks with a Focus on Investigating the Interpretability of Latent Geometry within the Two GNNs.
+A comparative analysis of an e(3) equivariant gnn and a non-equivariant gnn in materials data tasks with a focus on investigating the interpretability of latent geometry within the two gnns.
 
 Introduction
 ======
@@ -105,7 +105,7 @@ For the equivariant GNN, the node-wise formulation of the message is:
 $$f'_i = \frac{1}{\sqrt{z}} \sum_{j \in \partial(i)} \; f_j \; \otimes\!(h(\|x_{ij}\|)) \; Y(x_{ij} / \|x_{ij}\|) $$
 </center>
 
-where \\() f_j, f_i \\) are the target and source nodes feature vectors, defined similarly as a one-hot representation of the atomic number. \\(z\\) is the average degree (number of neighhbors) of the nodes, and the neighborhood \\(\partial(i)\\) is once again defined using a radial cutoff. \\(x_{ij}\\) is the relative distance vector, \\(h)\\ is a multi layer perceptron and \\(Y\\) is the spherical harmonics. The expression \\(x \; \otimes\(w) \; y\\) denotes a tensor product of \\(x\\) with \\(y\\) using weights \\(w\\). This signifies that the message passing formula involves a convolution over nodes' feature vectors with filters constrained to be a multiplication of a learned radial function and the spherical harmonics.
+where \\() f_j, f_i \\) are the target and source nodes feature vectors, defined similarly as a one-hot representation of the atomic number. \\(z\\) is the average degree (number of neighhbors) of the nodes, and the neighborhood \\(\partial(i)\\) is once again defined using a radial cutoff. \\(x_{ij}\\) is the relative distance vector, \\(h\\) is a multi layer perceptron and \\(Y\\) is the spherical harmonics. The expression \\(x \; \otimes\(w) \; y\\) denotes a tensor product of \\(x\\) with \\(y\\) using weights \\(w\\). This signifies that the message passing formula involves a convolution over nodes' feature vectors with filters constrained to be a multiplication of a learned radial function and the spherical harmonics.
 
 
 Results
@@ -183,7 +183,7 @@ To assess whether there's molecular structural ordering in the embeddings, we co
     </figcaption>
 </figure>
 
-
+  
 
 The distributions appear very similar for each variable in the train and validation sets. Now, let's examine Ethanol's validation conformations latent projection, color-coded with respect to the target and the three system-specific variables:
 
