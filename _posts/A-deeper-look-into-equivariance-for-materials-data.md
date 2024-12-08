@@ -6,6 +6,7 @@ permalink: /posts/2023/11/Equivariance_for_Materials_Data/
 tags:
   - Equivariance
   - GNN
+  - Molecules
 ---
 
 A Comparative Analysis of an E(3) Equivariant GNN and a Non-Equivariant GNN in Materials Data Tasks with a Focus on Investigating the Interpretability of Latent Geometry within the Two GNNs.
