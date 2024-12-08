@@ -51,6 +51,16 @@ Our focus narrowed down to the molecules Aspirin, Ethanol, and Toluene:
   </div>
 </div>
 
+<div align="center">
+    <img src="/images/proj_equiv_DL/aspirin.jpg" width="30%"> 
+    <img src="/images/proj_equiv_DL/ethanol.jpg" width="30%"> 
+    <img src="/images/proj_equiv_DL/toluene.jpg" width="30%"> 
+</div>
+
+| ![](images/proj_equiv_DL/aspirin.jpg)  | ![](images/proj_equiv_DL/ethanol.jpg)  | ![](images/proj_equiv_DL/toluene.jpg)  |
+|:------------------------------------:|:------------------------------------:|:------------------------------------:|
+| Aspirin (C9H8O4)                    | Ethanol (C2H5OH)                     | Toluene (C6H5CH3)                    |
+
 
 The distributions of energy values (kcal/mol) for various conformations of the three molecules, within the training and validation sets, are illustrated in the histograms below.
 
