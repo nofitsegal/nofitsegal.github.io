@@ -19,5 +19,3 @@ OOD What?
 Case Study: [EDM](https://arxiv.org/abs/2203.17003) model
 ======
 
-Test
-------
