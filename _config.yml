@@ -21,7 +21,7 @@ repository               : "nofitsegal/nofitsegal.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "Nofit_Headshot.jpg"
+  avatar           : "Nofit_Headshot.JPG"
   name             : "Nofit Segal"
   pronouns         : # example: "she/her"  
   bio              : "PhD Student at MIT | AI for Materials Science | Learning Matter Group"
