@@ -40,13 +40,9 @@ Each trajectory within the dataset includes Cartesian positions of atoms (in Ang
 
 Our focus narrowed down to the molecules Aspirin, Ethanol, and Toluene:
 
-<div class="row mt-3">
-  {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/aspirin.jpg" caption="Aspirin (C9H8O4)" class="img-fluid rounded z-depth-1 mb-3" style="width: 100px; height: 150px;" %}
-  {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/ethanol.jpg" caption="Ethanol (C2H5OH)" class="img-fluid rounded z-depth-1 mb-3" style="width: 100px; height: 150px;" %}
-  {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/toluene.jpg" caption="Toluene (C6H5CH3)" class="img-fluid rounded z-depth-1 mb-3" style="width: 100px; height: 150px;" %}
-</div>
 
 The distributions of energy values (kcal/mol) for various conformations of the three molecules, within the training and validation sets, are illustrated in the histograms below.
 
 
 
+<img align="right" src="../images/ood_preds_kde_compare.png" width="25%">
