@@ -45,20 +45,21 @@ Our focus narrowed down to the molecules Aspirin, Ethanol, and Toluene:
     <img src="/images/proj_equiv_DL/ethanol.jpg" width="30%"> 
     <img src="/images/proj_equiv_DL/toluene.jpg" width="30%"> 
 </div>
-<div align="center">
-    <div>
+<div align="center" style="display: flex; justify-content: space-around; align-items: center;">
+    <div style="text-align: center;">
         <img src="/images/proj_equiv_DL/aspirin.jpg" width="30%">
         <div>Aspirin (C9H8O4)</div>
     </div>
-    <div>
+    <div style="text-align: center;">
         <img src="/images/proj_equiv_DL/ethanol.jpg" width="30%">
         <div>Ethanol (C2H5OH)</div>
     </div>
-    <div>
+    <div style="text-align: center;">
         <img src="/images/proj_equiv_DL/toluene.jpg" width="30%">
         <div>Toluene (C6H5CH3)</div>
     </div>
 </div>
+
 
 
 
