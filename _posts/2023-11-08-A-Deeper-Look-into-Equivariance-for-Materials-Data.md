@@ -20,7 +20,7 @@ In recent years, there has been a heightened focus on employing machine learning
 
 The diverse arrangements of atoms in the system result in varying potential energy values, influencing chemical stability. In the GIF below, different trajectories can be seen of the molecule Ethane. The Ethane molecule spends 99% of its time in a specific conformation, in which the substituents are at the maximum distance from each other. This conformation is called the staggered conformation. Looking at the molecule from a position on the C-C (main) axis (as in the second half of the animation), The staggered conformation is reached when the H atoms of the front C atom are exactly between the H atoms of the other C atom. This animation also show the 3-fold symmetry of the molecule around the main axis. All three staggered conformations will have the same energy value, as they are completely equivalent. The intermediate conformations will result in a higher energy value, as they are energetically less favorable. Different conformations can also portray elongations of some bonds lengths and variations in angles value. Predicting stable arrangements of atomic systems is in itself an important challenge! 
 
-<!-- <p align="center">
+<p align="center">
   <img width="500" src="https://upload.wikimedia.org/wikipedia/commons/7/76/Ethane_conformation.gif" alt="Conformations of Ethane (C2H6) molecule" />
 </p>
 
@@ -29,4 +29,4 @@ The diverse arrangements of atoms in the system result in varying potential ener
 </div>
 
 
-In the three-dimensional Euclidean space, materials and physical systems in general, inherently exhibit rotation, translation, and inversion symmetries. These operations form the E(3) symmetry group, a group of transformations that preserve the Euclidean distance between any two points in 3D space. When adopting a graph-based approach, a generic GNN may be sensitive to these operations, but an E(3) equivariant GNN excels in handling such complexities. Its inherent capability to grasp rotations, translations, and inversions allows for a more nuanced understanding, enabling the capture of underlying physical symmetries within the material structures [[Batzner et al, 2022](@batzner20223)]. -->
+In the three-dimensional Euclidean space, materials and physical systems in general, inherently exhibit rotation, translation, and inversion symmetries. These operations form the E(3) symmetry group, a group of transformations that preserve the Euclidean distance between any two points in 3D space. When adopting a graph-based approach, a generic GNN may be sensitive to these operations, but an E(3) equivariant GNN excels in handling such complexities. Its inherent capability to grasp rotations, translations, and inversions allows for a more nuanced understanding, enabling the capture of underlying physical symmetries within the material structures [[Batzner et al, 2022](@batzner20223)].
