@@ -22,7 +22,7 @@ The diverse arrangements of atoms in the system result in varying potential ener
 
 <figure class="text-center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Ethane_conformation.gif" class="img-fluid" width="350">
-  <figcaption class="figure-caption mt-3">
+  <figcaption class="figure-caption text-center mt-3">
     Conformations of the molecule Ethane (C2H6)
   </figcaption>
 </figure>
@@ -61,21 +61,21 @@ Our focus narrowed down to the molecules Aspirin, Ethanol, and Toluene:
 
 
 The distributions of energy values (kcal/mol) for various conformations of the three molecules, within the training and validation sets, are illustrated in the histograms below.
+<div>
+    <img src="/images/proj_equiv_DL/hist_asp_t.png" width="45%">
+    <img src="/images/proj_equiv_DL/hist_asp_v.png" width="45%">
+</div>
+<div>
+    <img src="/images/proj_equiv_DL/hist_eth_t.png" width="45%">
+    <img src="/images/proj_equiv_DL/hist_eth_v.png" width="45%">
+</div>
+<div>
+    <img src="/images/proj_equiv_DL/hist_tol_t.png" width="45%">
+    <img src="/images/proj_equiv_DL/hist_tol_v.png" width="45%">
+</div>
 
 <figure align="center">
-    <div>
-        <img src="/images/proj_equiv_DL/hist_asp_t.png" width="45%">
-        <img src="/images/proj_equiv_DL/hist_asp_v.png" width="45%">
-    </div>
-    <div>
-        <img src="/images/proj_equiv_DL/hist_eth_t.png" width="45%">
-        <img src="/images/proj_equiv_DL/hist_eth_v.png" width="45%">
-    </div>
-    <div>
-        <img src="/images/proj_equiv_DL/hist_tol_t.png" width="45%">
-        <img src="/images/proj_equiv_DL/hist_tol_v.png" width="45%">
-    </div>
-    <figcaption class="figure-caption text-center mt-3">
+<figcaption class="figure-caption text-center mt-3">
         Energy (kcal/mol) distributions for Aspirin (C9H8O4), Ethanol (C2H5OH), and Toluene (C6H5CH3) molecules in train (left) and validation (right) sets.
     </figcaption>
 </figure>
