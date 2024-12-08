@@ -52,10 +52,10 @@ The distributions of energy values (kcal/mol) for various conformations of the t
 <div class="row mt-3">
   <!-- Row 1 -->
   <div class="col-md-6">
-    <br/><img src='/images/proj_equiv_DL/hist_asp_t.png' alt='Histogram of ASP T' class="img-fluid rounded z-depth-1" width="100%">
+    <br/><img src="/images/proj_equiv_DL/hist_asp_t.png" alt="Histogram of ASP T" width="100%">
   </div>
   <div class="col-md-6">
-    <br/><img src='/images/proj_equiv_DL/hist_asp_v.png' alt='Histogram of ASP V' class="img-fluid rounded z-depth-1" width="100%">
+    <br/><img src="/images/proj_equiv_DL/hist_asp_v.png" alt="Histogram of ASP V" width="100%">
   </div>
 </div>
 
