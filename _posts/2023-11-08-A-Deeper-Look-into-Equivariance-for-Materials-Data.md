@@ -30,3 +30,32 @@ The diverse arrangements of atoms in the system result in varying potential ener
 
 
 In the three-dimensional Euclidean space, materials and physical systems in general, inherently exhibit rotation, translation, and inversion symmetries. These operations form the E(3) symmetry group, a group of transformations that preserve the Euclidean distance between any two points in 3D space. When adopting a graph-based approach, a generic GNN may be sensitive to these operations, but an E(3) equivariant GNN excels in handling such complexities. Its inherent capability to grasp rotations, translations, and inversions allows for a more nuanced understanding, enabling the capture of underlying physical symmetries within the material structures [[Batzner et al, 2022](@batzner20223)].
+
+Data
+======
+
+The MD 17 dataset, an extensive repository of ab-initio molecular dynamics trajectories [[Chmiela et al, 2019](@chmiela2019sgdml)], was employed in this study. 
+
+Each trajectory within the dataset includes Cartesian positions of atoms (in Angstrom), their atomic numbers, along with total energy (in kcal/mol) and forces (kcal/mol/Angstrom) acting on each atom. The latter two parameters serve as regression targets in analyses.
+
+Our focus narrowed down to the molecules Aspirin, Ethanol, and Toluene:
+
+<div class="row mt-3">
+  {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/aspirin.jpg" caption="Aspirin (C9H8O4)" class="img-fluid rounded z-depth-1 mb-3" style="width: 100px; height: 150px;" %}
+  {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/ethanol.jpg" caption="Ethanol (C2H5OH)" class="img-fluid rounded z-depth-1 mb-3" style="width: 100px; height: 150px;" %}
+  {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/toluene.jpg" caption="Toluene (C6H5CH3)" class="img-fluid rounded z-depth-1 mb-3" style="width: 100px; height: 150px;" %}
+</div>
+
+The distributions of energy values (kcal/mol) for various conformations of the three molecules, within the training and validation sets, are illustrated in the histograms below.
+
+
+<div class="row mt-3">
+  <!-- Row 1 -->
+  <div class="col-md-6">
+    {% include figure.html path="images/proj_equiv_DL6.S898/hist_asp_t.png" class="img-fluid rounded z-depth-1" width="100%" %}
+  </div>
+  <div class="col-md-6">
+    {% include figure.html path="images/proj_equiv_DL6.S898/hist_asp_v.png" class="img-fluid rounded z-depth-1" width="100%" %}
+  </div>
+</div>
+
