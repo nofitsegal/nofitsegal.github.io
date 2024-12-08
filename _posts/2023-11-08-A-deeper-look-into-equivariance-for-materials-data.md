@@ -2,7 +2,7 @@
 # layout: distill
 title: A Deeper Look into Equivariance for Materials Data
 date: 2023-11-08
-permalink: /posts/2023/11/Equivariance_for_Materials_Data/
+permalink: /posts/2023/11/equivariance_for_materials_Data/
 tags:
   - Equivariance
   - GNN
