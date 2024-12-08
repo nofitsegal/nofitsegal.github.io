@@ -212,6 +212,14 @@ collections:
     output: true
     permalink: /:collection/:path/
 
+plugins:
+  - jekyll-scholar
+
+scholar:
+  bibliography: _posts/references.bib
+  # csl: _posts/style.csl
+  query: "@*"
+  style: apa
 
 # Defaults
 defaults:
