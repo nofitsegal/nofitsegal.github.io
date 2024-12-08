@@ -16,8 +16,8 @@ author_profile: true
 **Nofit Segal**\*, Aviv Netanyahu\*, Kevin Greenman, Pulkit Agrawal, Rafael Gomez-Bombarelli \
 *in submission* 
 
-_AI for Accelerated Materials Design Workshop, Neurips 2024_ <span style="color:firebrick"> _Spotlight Talk_ </span> \
-_Next-Generation AI-Catalyzed Scientific Workflow for Digital Materials Discovery Symposium, Materials Research Society fall 2024_ \
+_AI for Accelerated Materials Design Workshop, NeurIPS 2024_ <span style="color:firebrick"> _Spotlight Talk_ </span> \
+_Next-Generation AI-Catalyzed Scientific Workflow for Digital Materials Discovery Symposium, Materials Research Society (MRS), Fall 2024_ \
 [[Paper](https://openreview.net/pdf?id=HkfnueE7Ae)]  
 <!-- [[Code](https://github.com/DanHrmti/ECRL)]  [[Website](https://sites.google.com/view/entity-centric-rl/)]   -->
 <!-- [[Talk](https://youtu.be/1YJCWyLcGHk?t=1)] -->

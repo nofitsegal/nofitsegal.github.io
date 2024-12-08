@@ -99,8 +99,7 @@ However, out of the 100 molecules generated, only 1% were valid molecules. Unfor
 <div style="text-align: center;">
     <img src="/images/proj_ext_gen_mol/extrapol_gif_loop.gif" width="60%">
 </div>
-
-
+<br> 
 <div style="text-align: center;">
     <img src="/images/proj_ext_gen_mol/conditional_098.png" width="30%">
     <img src="/images/proj_ext_gen_mol/conditional_078.png" width="30%">
@@ -131,8 +130,7 @@ While the model was able to produce more valid molecules in the desired extreme 
 <div style="text-align: center;">
     <img src="/images/proj_ext_gen_mol/interpol_gif_loop.gif" width="60%">
 </div>
-
-
+<br> 
 <div style="text-align: center;">
     <img src="/images/proj_ext_gen_mol/conditional_036.png" width="30%">
     <img src="/images/proj_ext_gen_mol/conditional_055.png" width="30%">

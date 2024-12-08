@@ -9,7 +9,7 @@ tags:
   - Molecules
 ---
 
-A comparative analysis of an e(3) equivariant gnn and a non-equivariant gnn in materials data tasks with a focus on investigating the interpretability of latent geometry within the two gnns.
+A comparative analysis of an E(3) equivariant and a non-equivariant GNN in materials data tasks with a focus on investigating the interpretability of their latent geometry.
 
 Introduction
 ======
