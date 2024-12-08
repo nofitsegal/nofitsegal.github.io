@@ -45,12 +45,12 @@ EDM is an E(3) equivariant diffusion model for generating molecules in 3D [[Hoog
 For the model to generalize well across molecular data, it needs to be \textbf{invariant} with respect to the E(3) group, which includes all 3D Euclidean symmetries, i.e. rotations, translations, and inversions. However, to account for chiral molecules, SE(3) invariance should be considered. The premise of this work relies on the following theorem:
 
 **Theorem**  
-If \\( x \sim p(x) \\) is invariant to a group and the transition probabilities of a Markov Chain \\( y \sim p(y|x)\\) are equivariant, then the marginal distribution of \\( y \\) at any time step is invariant to group transformations as well.
+If \\( x \sim p(x) \\) is invariant to a group and the transition probabilities of a Markov Chain \\( y \sim p(y \mid x)\\) are equivariant, then the marginal distribution of \\( y \\) at any time step is invariant to group transformations as well.
 
-This means that if the standard noise \\(p(z_T)\\) is invariant to E(3) and the neural network used to parameterize the diffusion process \\(p(z_{t-1}|z_t)\\) is equivariant to E(3), then the marginal distribution \\(p(x)\\) of the output of the denoising model will be invariant as desired!
+This means that if the standard noise \\(p(z_T)\\) is invariant to E(3) and the neural network used to parameterize the diffusion process \\(p(z_{t-1} \mid z_t)\\) is equivariant to E(3), then the marginal distribution \\(p(x)\\) of the output of the denoising model will be invariant as desired!
 
 The forward diffusion process is modelled as follows:
-$$ q(z_t |x,h) = \mathcal{N}_{xh}(z_t|\alpha_t [x,h],\sigma_t^2 I) = \mathcal{N}_x(z_t^x|\alpha_t x, \sigma_t^2 I) \mathcal{N}(z_t^h|\alpha_t h, \sigma_t^2 I)
+$$ q(z_t \mid x,h) = \mathcal{N}_{xh}(z_t|\alpha_t [x,h],\sigma_t^2 I) = \mathcal{N}_x(z_t^x|\alpha_t x, \sigma_t^2 I) \mathcal{N}(z_t^h|\alpha_t h, \sigma_t^2 I)
 $$
 
 In order for the standrd noise to be *invaraint*, the forward diffusion process needs to produce an invariant noise. \\(h\\) is invariant w.r.t \\(E(3)\\) transformations, as the atomic types of the molecule are not affected by Euclidean operators, so the noise distribution for \\(h\\) can be the conventional normal distribution \\(\mathcal{N}\\). Generally, for a distribution to be invariant to translation – it needs to be constant. But if it’s constant, it can not integrate to 1. In order to construct a translation invariant noise distribution, the noising process of \\(x\\) can be restricted to a translation invariant linear subspace – by centering the nodes s.t. their gravity center is always zero [[Satorras et al, 2021](@garcia2021n)].
@@ -85,19 +85,21 @@ OOD Generalization Results
 The model was initially trained conditionally on isotropic polarizability \\(\alpha\\) values \\(x, h \sim p(x, h | c)\\) drawn from the training distribution. During inference, generation was conditioned on out-of-distribution (OOD) property values (represented by the red extension of the distribution). Among the 100 molecules generated, only 38% were stable enough to run quantum mechanics (QM) calculations. The remaining molecules had issues such as incorrect charge or valency, rendering them completely invalid for QM simulations. Notably, the model appears to have generated some molecules with OOD isotropic polarizability values, as the histogram of the generated molecules \\(\alpha\\) extends beyond the OOD threshold!
 
 <div>
-    <img src="/images/proj_ext_gen_mol/hist_ood.png" width="45%">
+    <img src="/images/proj_ext_gen_mol/hist_ood.png" width="50%">
     <img src="/images/proj_ext_gen_mol/extrapol.png" width="45%">
 </div>
+<figure align="center">
 <figcaption class="figure-caption text-center mt-3">
-        Left: Distribution of training and OOD \\(\alpha\\) values. Right: histogram of the 38% generated molecules, before validity check.
+        Left: Distribution of training and OOD isotropic polarizability values. Right: histogram of the 38% generated molecules, before validity check.
     </figcaption>
 </figure>
 
 However, out of the 100 molecules generated, only 1% were valid molecules. Unfortunately, this single valid molecule had an isotropic polarizability of \\(\alpha = 105.6\\), placing it well within the distribution rather than in the OOD range. The remaining molecules exhibited incorrect bond lengths that would break the molecule in reality, as illustrated in the gif and figures below.
 
-<div>
+<div style="text-align: center;">
     <img src="/images/proj_ext_gen_mol/extrapol_gif_loop.gif" width="60%">
 </div>
+
 <div>
     <img src="/images/proj_ext_gen_mol/conditional_098.png" width="30%">
     <img src="/images/proj_ext_gen_mol/conditional_078.png" width="30%">
@@ -105,7 +107,7 @@ However, out of the 100 molecules generated, only 1% were valid molecules. Unfor
 </div>
 <figure align="center">
 <figcaption class="figure-caption text-center mt-3">
-        Top: all generated molecules in a gif. The left two images show examples of invalid molecules with supposedly OOD \\(\alpha\\) values. On the right is the single valid molecule, which is not OOD.
+        Top: All generated molecules are shown in the GIF. The left two images display examples of invalid molecules with supposedly OOD isotropic polarizability values, while the right image shows the single valid molecule, which is not OOD
     </figcaption>
 </figure>
 
@@ -115,18 +117,20 @@ It’s interesting to examine the model's ability to generate molecules with ext
 
 In this case, 55% of the 100 molecules were stable enough for QM calculations, and 13% actually valid. 
 <div>
-    <img src="/images/proj_ext_gen_mol/hist_ood.png" width="45%">
+    <img src="/images/proj_ext_gen_mol/hist_ood.png" width="50%">
     <img src="/images/proj_ext_gen_mol/interpol.png" width="45%">
 </div>
+<figure align="center">
 <figcaption class="figure-caption text-center mt-3">
-        Left: Distribution of training and extrame ID \\(\alpha\\) values. Right: histogram of the 55% generated molecules, before validity check.
+        Left: Distribution of training and extrame ID isotropic polarizability values. Right: histogram of the 55% generated molecules, before validity check.
     </figcaption>
 </figure>
 
 While the model was able to produce more valid molecules in the desired extreme \\(\alpha\\) range, the highest value was \\(\alpha = 112.6\\), far from the distribution edge.
-<div>
+<div style="text-align: center;">
     <img src="/images/proj_ext_gen_mol/interpol_gif_loop.gif" width="60%">
 </div>
+
 <div>
     <img src="/images/proj_ext_gen_mol/conditional_036.png" width="30%">
     <img src="/images/proj_ext_gen_mol/conditional_055.png" width="30%">
