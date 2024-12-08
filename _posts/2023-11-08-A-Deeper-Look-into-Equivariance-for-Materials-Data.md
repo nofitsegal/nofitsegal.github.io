@@ -21,7 +21,7 @@ In recent years, there has been a heightened focus on employing machine learning
 The diverse arrangements of atoms in the system result in varying potential energy values, influencing chemical stability. In the GIF below, different trajectories can be seen of the molecule Ethane. The Ethane molecule spends 99% of its time in a specific conformation, in which the substituents are at the maximum distance from each other. This conformation is called the staggered conformation. Looking at the molecule from a position on the C-C (main) axis (as in the second half of the animation), The staggered conformation is reached when the H atoms of the front C atom are exactly between the H atoms of the other C atom. This animation also show the 3-fold symmetry of the molecule around the main axis. All three staggered conformations will have the same energy value, as they are completely equivalent. The intermediate conformations will result in a higher energy value, as they are energetically less favorable. Different conformations can also portray elongations of some bonds lengths and variations in angles value. Predicting stable arrangements of atomic systems is in itself an important challenge! 
 
 <figure class="text-center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Ethane_conformation.gif" alt="Conformations of Ethane (C2H6) molecule" class="img-fluid" width="500">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Ethane_conformation.gif" class="img-fluid" width="350">
   <figcaption class="figure-caption mt-3">
     Conformations of the molecule Ethane (C2H6)
   </figcaption>
@@ -39,27 +39,27 @@ The MD 17 dataset, an extensive repository of ab-initio molecular dynamics traje
 Each trajectory within the dataset includes Cartesian positions of atoms (in Angstrom), their atomic numbers, along with total energy (in kcal/mol) and forces (kcal/mol/Angstrom) acting on each atom. The latter two parameters serve as regression targets in analyses.
 
 Our focus narrowed down to the molecules Aspirin, Ethanol, and Toluene:
-<div class="row mt-3">
-  <div class="col-md-4">
-    <img src="/images/proj_equiv_DL/aspirin.jpg" alt="Aspirin (C9H8O4)" class="img-fluid rounded z-depth-1 mb-3" style="width: 30%; height: auto;">
-  </div>
-  <div class="col-md-4">
-    <img src="/images/proj_equiv_DL/ethanol.jpg" alt="Ethanol (C2H5OH)" class="img-fluid rounded z-depth-1 mb-3" style="width: 30%; height: auto;">
-  </div>
-  <div class="col-md-4">
-    <img src="/images/proj_equiv_DL/toluene.jpg" alt="Toluene (C6H5CH3)" class="img-fluid rounded z-depth-1 mb-3" style="width: 30%; height: auto;">
-  </div>
-</div>
 
 <div align="center">
     <img src="/images/proj_equiv_DL/aspirin.jpg" width="30%"> 
     <img src="/images/proj_equiv_DL/ethanol.jpg" width="30%"> 
     <img src="/images/proj_equiv_DL/toluene.jpg" width="30%"> 
 </div>
+<div align="center">
+    <div>
+        <img src="/images/proj_equiv_DL/aspirin.jpg" width="30%">
+        <div>Aspirin (C9H8O4)</div>
+    </div>
+    <div>
+        <img src="/images/proj_equiv_DL/ethanol.jpg" width="30%">
+        <div>Ethanol (C2H5OH)</div>
+    </div>
+    <div>
+        <img src="/images/proj_equiv_DL/toluene.jpg" width="30%">
+        <div>Toluene (C6H5CH3)</div>
+    </div>
+</div>
 
-| ![](images/proj_equiv_DL/aspirin.jpg)  | ![](images/proj_equiv_DL/ethanol.jpg)  | ![](images/proj_equiv_DL/toluene.jpg)  |
-|:------------------------------------:|:------------------------------------:|:------------------------------------:|
-| Aspirin (C9H8O4)                    | Ethanol (C2H5OH)                     | Toluene (C6H5CH3)                    |
 
 
 The distributions of energy values (kcal/mol) for various conformations of the three molecules, within the training and validation sets, are illustrated in the histograms below.
