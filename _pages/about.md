@@ -14,7 +14,7 @@ and generative strategies.
 
 Research questions I am currently drawn to involve Learning representations and incorporate structure in learning algorithms that facilitate out-of-distribution (OOD) generalization for materials.
 
-I received my B.Sc. in Materials Science and Engineering at the Technion supported by the Technnion Rothschild Excellence Fellowship.
+I received my B.Sc. in Materials Science and Engineering at the Technion, supported by the Technnion Rothschild Excellence Fellowship.
 
 News
 ======
