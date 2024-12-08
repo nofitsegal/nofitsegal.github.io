@@ -39,10 +39,223 @@ The MD 17 dataset, an extensive repository of ab-initio molecular dynamics traje
 Each trajectory within the dataset includes Cartesian positions of atoms (in Angstrom), their atomic numbers, along with total energy (in kcal/mol) and forces (kcal/mol/Angstrom) acting on each atom. The latter two parameters serve as regression targets in analyses.
 
 Our focus narrowed down to the molecules Aspirin, Ethanol, and Toluene:
-
+<div class="row mt-3">
+  <div class="col-md-4">
+    <img src="/images/proj_equiv_DL/aspirin.jpg" alt="Aspirin (C9H8O4)" class="img-fluid rounded z-depth-1 mb-3" style="width: 100px; height: 150px;">
+  </div>
+  <div class="col-md-4">
+    <img src="/images/proj_equiv_DL/ethanol.jpg" alt="Ethanol (C2H5OH)" class="img-fluid rounded z-depth-1 mb-3" style="width: 100px; height: 150px;">
+  </div>
+  <div class="col-md-4">
+    <img src="/images/proj_equiv_DL/toluene.jpg" alt="Toluene (C6H5CH3)" class="img-fluid rounded z-depth-1 mb-3" style="width: 100px; height: 150px;">
+  </div>
+</div>
 
 The distributions of energy values (kcal/mol) for various conformations of the three molecules, within the training and validation sets, are illustrated in the histograms below.
 
+<div class="row mt-3">
+  <!-- Row 1 -->
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/hist_asp_t.png" alt="Aspirin Train Set Distribution" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/hist_asp_v.png" alt="Aspirin Validation Set Distribution" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+</div>
+
+<div class="row mt-3">
+  <!-- Row 2 -->
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/hist_eth_t.png" alt="Ethanol Train Set Distribution" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/hist_eth_v.png" alt="Ethanol Validation Set Distribution" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+</div>
+
+<div class="row mt-3">
+  <!-- Row 3 -->
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/hist_tol_t.png" alt="Toluene Train Set Distribution" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/hist_tol_v.png" alt="Toluene Validation Set Distribution" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+</div>
+
+<div class="caption">
+  Energy (kcal/mol) distributions for Aspirin (C9H8O4), Ethanol (C2H5OH), and Toluene (C6H5CH3) molecules in train and validation sets.
+</div>
+
+The training set for Aspirin comprises 1000 conformations, while its validation set consists of 500 conformations. Ethanol's training and validation sets each consist of 1000 conformations. Toluene's training set comprises 1000 conformations, and its validation set consists of 500 conformations.
+
+Method
+======
+
+In this project, our objective is to conduct a comparative analysis of two Graph Neural Network (GNN) architectures: an E(3) equivariant network and a non-equivariant (specifically E(3) Invariant) one. The primary focus is on energy prediction tasks related to atomic systems, with a particular emphasis on exploring the distinctions within the latent representations of these architectures and their interpretability.
+
+All GNNs are permutation invariant by design [[Keriven and Peyr, 2019](@DBLP:journals/corr/abs-1905-04943)]. Our baseline GNN for comparison achieves rotation and translation invariance by simply operating only on interatomic distances instead of absolute position of the atoms. This design choice ensures that both the output and internal features of the network remain invariant to rotations. In contrast, our equivariant GNN for comparison utilizes relative position vectors rather than distances (scalars) together with features comprised of not only scalars, but also higher-order geometric tensors.
+
+In our Invariant GNN, the node-wise formulation of the message passing is given by:
+<center>
+$$\mathbf{x}^{\prime}_i = \mathbf{\Theta}^{\top} \sum_{j \in \mathcal{N}(i) \cup \{ i \}} \frac{e_{j,i}}{\sqrt{\hat{d}_j
+\hat{d}_i}} \mathbf{x}_j$$</center>
+
+Where $ x_i, x_j $ are the feature vectors of the target and source nodes, respectively, defined as a one-hot representation of the atomic number of that node. The summation is performed over the neighborhood \\(\mathcal{N}(i)\\) of atom $i$, defined by a radial cutoff around each node, a tunable parameter typically set around 4-5 angstroms. Meaning, the concept of neighborhood is based on the distance between nodes, not their connectivity. Additionally, \\( d_i = 1 + \sum_{j \in \mathcal{N}(i)} e_{j,i} \\) where \\( e_{j,i} \\) represents the edge weight from the source node \\(j\\) to the target node $i$ , and is defined as the interatomic distance.
+
+For constructing our equivariant GNN, [E3nn](https://e3nn.org/) was employed - a torch-based library designed for building o(3) equivariant networks. Following the method presented in [[Batzner et al, 2022](@batzner20223)], a neural network that exhibits invariance to translation and equivariance to rotation and inversion was constructed. Two key aspects of E3nn facilitating the construction of O(3) equivariant neural networks are the use of irreducible representations (Irreps) for data structuring and encapsulating geometrical information in Spherical Harmonics. Irreps are data structures that describe how the data behaves under rotation. We can think of them as data types, in the sense that this structure includes the values of the data alongside instructions for interpretation. The Spherical Harmonics form an orthonormal basis set of functions that operate on a sphere, and they’re equivariant with respect to rotations, which makes them very useful (and popular!) in expanding expressions in physical settings with spherical symmetry. 
+
+For the equivariant GNN, the node-wise formulation of the message is:
+<center>
+$$f'_i = \frac{1}{\sqrt{z}} \sum_{j \in \partial(i)} \; f_j \; \otimes\!(h(\|x_{ij}\|)) \; Y(x_{ij} / \|x_{ij}\|) $$
+</center>
+
+where \\() f_j, f_i \\) are the target and source nodes feature vectors, defined similarly as a one-hot representation of the atomic number. \\(z\\) is the average degree (number of neighhbors) of the nodes, and the neighborhood \\(\partial(i)\\) is once again defined using a radial cutoff. \\(x_{ij}\\) is the relative distance vector, \\(h)\\ is a multi layer perceptron and \\(Y\\) is the spherical harmonics. The expression \\(x \; \otimes\(w) \; y\\) denotes a tensor product of \\(x\\) with \\(y\\) using weights \\(w\\). This signifies that the message passing formula involves a convolution over nodes' feature vectors with filters constrained to be a multiplication of a learned radial function and the spherical harmonics.
 
 
-<img align="right" src="/images/ood_preds_kde_compare.png" width="25%">
+Results
+======
+
+The performance of the two GNNs was compared for the task of predicting the total energy of the molecule’s conformation - a scalar property. By constraining the Equivariant GNN to predict a scalar output, it becomes overall invariant to the E(3) group. However, the use of higher order geometric tensors in the intermediate representations and operations in the E-GNN, makes internal features equivariant to rotation and inversion. This enables the passage of angular information through the network using rotationally equivariant filters (spherical harmonics) in the node feature convolution. This is the essential difference between the two architectures.
+
+The learning curves of the two GNNs for each molecule data are presented in the figures below: 
+<div class="row mt-3">
+  <!-- Row 1 -->
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/energy_pred_asp_t_epoch_new.png" alt="Aspirin Train Set Energy Prediction" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/energy_pred_asp_v_epoch_new.png" alt="Aspirin Validation Set Energy Prediction" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+</div>
+
+<div class="row mt-3">
+  <!-- Row 2 -->
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/energy_pred_ethanol_t_epoch_new.png" alt="Ethanol Train Set Energy Prediction" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/energy_pred_ethanol_v_epoch_new.png" alt="Ethanol Validation Set Energy Prediction" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+</div>
+
+<div class="row mt-3">
+  <!-- Row 3 -->
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/energy_pred_tol_t_epoch_new.png" alt="Toluene Train Set Energy Prediction" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/energy_pred_tol_v_epoch_new.png" alt="Toluene Validation Set Energy Prediction" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+</div>
+
+<div class="caption">
+    Train (left) and Validation (right) learning curves of Energy (kcal/mol) prediction of Aspirin (top), Ethanol (middle) and Toluene (bottom) conformations.
+</div>
+
+The models were trained for 50 epochs using mean absolute error (MAE) objective for predicting normalized energy (in kcal/mol units). Adam optimizer with a learning rate of 0.01 and learning rate scheduler were employed. The E-GNN achieves a superior MAE rate for all three molecules.
+
+Next, let's examine the latent representation of the two models! The last layer values of the validation data of both models were projected using t-SNE to a 2D representation and color-coded according to the target energy values: 
+<div class="row mt-3">
+  <!-- Row 1 -->
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/egnn_lat_asp_1.png" alt="E-GNN Latent Representation for Aspirin" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/gnn_lat_asp_1.png" alt="GNN Latent Representation for Aspirin" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+</div>
+
+<div class="row mt-3">
+  <!-- Row 2 -->
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/egnn_lat_eth_2.png" alt="E-GNN Latent Representation for Ethanol" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/gnn_lat_eth_new.png" alt="GNN Latent Representation for Ethanol" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+</div>
+
+<div class="row mt-3">
+  <!-- Row 3 -->
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/egnn_lat_tol_2.png" alt="E-GNN Latent Representation for Toluene" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/gnn_lat_tol_1.png" alt="GNN Latent Representation for Toluene" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+</div>
+
+<div class="caption">
+    Latents projections of E-GNN (left) and GNN (right) last layer, of Aspirin (top), Ethanol (middle) and Toluene (bottom) conformations.
+</div>
+
+A color gradient can be seen in all three projections of the Equivariant GNN; and it is the clearest for Ethanol. The Invariant GNN’s latent projections do not exhibit  a similar structure, perhaps except for Ethanol’s conformations. Moreover, in Ethanol’s case, the GNN projection appears to be quite one-dimensional.
+
+The apparent color gradient according to the target values in the E-GNN latent space is impressive, suggesting that the model leverages this information when embedding data conformations for predictions. Multiple "locations" in the latent space denote various high-energy conformations, indicating that the model considers not only the target energy value but also structural differences.
+
+To assess whether there's molecular structural ordering in the embeddings, we construct system-specific variables for each molecule and visualize the latent space accordingly. Ethanol, with its relatively simple structure, showcases three important variables: the distance between the two Carbons (C-C bond), the distance between Carbon and Oxygen (C-O bond), and the angle formed by the three atoms. The distributions of these variables in Ethanol's train and validation sets are depicted in the figure below: 
+<div class="row mt-3">
+  <!-- Row 1 -->
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/eth_cc_t.png" alt="Ethanol C-C Bond Length (Train)" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/eth_cc_v.png" alt="Ethanol C-C Bond Length (Validation)" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+</div>
+
+<div class="row mt-3">
+  <!-- Row 2 -->
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/eth_co_t.png" alt="Ethanol C-O Bond Length (Train)" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/eth_co_v.png" alt="Ethanol C-O Bond Length (Validation)" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+</div>
+
+<div class="row mt-3">
+  <!-- Row 3 -->
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/eth_ang_t.png" alt="Ethanol Main Angle (Train)" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/eth_ang_v.png" alt="Ethanol Main Angle (Validation)" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+</div>
+
+<div class="caption">
+    Distributions in train (left) and validation (right) sets of Ethanol, of C-C bond length (top), C-O bond length (middle) and main angle (bottom).
+</div>
+
+The distributions appear very similar for each variable in the train and validation sets. Now, let's examine Ethanol's validation conformations latent projection, color-coded with respect to the target and the three system-specific variables:
+<div class="row mt-3">
+  <!-- Row 1 -->
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/egnn_lat_eth_2.png" alt="E-GNN Latent Projection Ethanol 2" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/egnn_lat_eth__cc_2.png" alt="E-GNN Latent Projection Ethanol C-C Bond Length 2" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+</div>
+
+<div class="row mt-3">
+  <!-- Row 2 -->
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/egnn_lat_eth__ang_2.png" alt="E-GNN Latent Projection Ethanol Main Angle 2" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+  <div class="col-md-6">
+    <img src="/images/proj_equiv_DL/egnn_lat_eth__co_2.png" alt="E-GNN Latent Projection Ethanol C-O Bond Length 2" class="img-fluid rounded z-depth-1" width="100%">
+  </div>
+</div>
+
+
+A clear gradient is observed for the main angle and C-C bond! The target gradient appears from the top left corner to the bottom right; the C-C bond gradient seems to go from bottom left to top right, and the main angle gradient isn’t as linear, appearing to spiral from the bottom to the top right corner clockwise. The C-O bond projection doesn’t seem to follow a discernible gradient, suggesting it's not as influential on the target as the other two variables.
+
+Cool huh? The Equivariant GNN appears to embed the data according to the target value but also according to the systems geometrical structure! This suggests that the model leverages its E(3) equivariant convolution layers to capture and encode information about both the target values and the intricate geometric features of the molecular systems.
+
+Conclusion
+======
+
+In conclusion, our exploration has demonstrated the efficiency of the E(3) equivariant GNN, compared to an invariant GNN, in predicting the total energy of molecular conformations. Though both models were compared on predicting energy, a scalar propery, the E-GNN's ability to leverage the inherent symmetries present in the system allowed it to effectively capture and encode the relationship between the arrangement of molecules and their respective energy. This was illustrated through the latent representation visualizations, and was particularly evident in the case of Ethanol. Here, discernible gradients in the latent space were observed, correlating with the target energy value and variations in C-C bond length and main angle. However, interpretability varies among the latent projections for the more complex molecules investigated in this project. Potential improvements could be achieved with additional data and a more expressive equivariant network.
