@@ -51,6 +51,7 @@ If \\( x \sim p(x) \\) is invariant to a group and the transition probabilities 
 This means that if the standard noise \\(p(z_T)\\) is invariant to E(3) and the neural network used to parameterize the diffusion process \\(p(z_{t-1} \mid z_t)\\) is equivariant to E(3), then the marginal distribution \\(p(x)\\) of the output of the denoising model will be invariant as desired!
 
 The forward diffusion process is modelled as follows:
+
 $$ q(z_t \mid x,h) = \mathcal{N}_{xh}(z_t|\alpha_t [x,h],\sigma_t^2 I) = \mathcal{N}_x(z_t^x|\alpha_t x, \sigma_t^2 I) \mathcal{N}(z_t^h|\alpha_t h, \sigma_t^2 I)
 $$
 
