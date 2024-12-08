@@ -49,13 +49,4 @@ Our focus narrowed down to the molecules Aspirin, Ethanol, and Toluene:
 The distributions of energy values (kcal/mol) for various conformations of the three molecules, within the training and validation sets, are illustrated in the histograms below.
 
 
-<!-- <div class="row mt-3">
-  <!-- Row 1 -->
-  <div class="col-md-6">
-    <br/><img src="/images/proj_equiv_DL/hist_asp_t.png" alt="Histogram of ASP T" width="100%">
-  </div>
-  <div class="col-md-6">
-    <br/><img src="/images/proj_equiv_DL/hist_asp_v.png" alt="Histogram of ASP V" width="100%">
-  </div>
-</div> -->
 
