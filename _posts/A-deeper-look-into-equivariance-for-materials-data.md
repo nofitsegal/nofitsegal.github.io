@@ -1,9 +1,16 @@
 ---
-layout: distill
+# layout: distill
 title: A Deeper Look into Equivariance for Materials Data
-description: A Comparative Analysis of an E(3) Equivariant GNN and a Non-Equivariant GNN in Materials Data Tasks with a Focus on Investigating the Interpretability of Latent Geometry within the Two GNNs.
 date: 2023-11-08
-htmlwidgets: true
+permalink: /posts/2023/11/Equivariance_for_Materials_Data/
+tags:
+  - Equivariance
+  - GNN
+---
+
+A Comparative Analysis of an E(3) Equivariant GNN and a Non-Equivariant GNN in Materials Data Tasks with a Focus on Investigating the Interpretability of Latent Geometry within the Two GNNs.
+
+<!-- htmlwidgets: true
 
 # Anonymize when submitting
 # authors:
@@ -46,9 +53,10 @@ _styles: >
     text-align: center;
     font-size: 16px;
   }
----
+--- -->
 
-## Introduction
+Introduction
+======
 
 Materials embody a diverse array of chemical and physical properties, intricately shaping their suitability for various applications. The representation of materials as graphs, where atoms serve as nodes and chemical bonds as edges, facilitates a systematic analysis. Graph Neural Networks (GNNs) have emerged as promising tools for deciphering relationships and patterns within materials data. The utilization of GNNs holds the potential to develop computational tools that deepen our understanding and aid in designing structure-property relationships in atomic systems.
 
@@ -68,7 +76,8 @@ In the three-dimensional Euclidean space, materials and physical systems in gene
 
 
 
-## Data
+Data
+======
 
 The MD 17 dataset, an extensive repository of ab-initio molecular dynamics trajectories [[Chmiela et al, 2019](@chmiela2019sgdml)], was employed in this study. 
 
@@ -121,7 +130,8 @@ The distributions of energy values (kcal/mol) for various conformations of the t
 
 The training set for Aspirin comprises 1000 conformations, while its validation set consists of 500 conformations. Ethanol's training and validation sets each consist of 1000 conformations. Toluene's training set comprises 1000 conformations, and its validation set consists of 500 conformations.
 
-## Method
+Method
+======
 
 In this project, our objective is to conduct a comparative analysis of two Graph Neural Network (GNN) architectures: an E(3) equivariant network and a non-equivariant (specifically E(3) Invariant) one. The primary focus is on energy prediction tasks related to atomic systems, with a particular emphasis on exploring the distinctions within the latent representations of these architectures and their interpretability.
 
@@ -145,7 +155,8 @@ $$f'_i = \frac{1}{\sqrt{z}} \sum_{j \in \partial(i)} \; f_j \; \otimes\!(h(\|x_{
 where $ f_j, f_i $ are the target and source nodes feature vectors, defined similarly as a one-hot representation of the atomic number. $z$ is the average degree (number of neighhbors) of the nodes, and the neighborhood $\partial(i)$ is once again defined using a radial cutoff. $x_{ij}$ is the relative distance vector, $h$ is a multi layer perceptron and $Y$ is the spherical harmonics. The expression $x \; \otimes\(w) \; y$ denotes a tensor product of $x$ with $y$ using weights $w$. This signifies that the message passing formula involves a convolution over nodes' feature vectors with filters constrained to be a multiplication of a learned radial function and the spherical harmonics.
 
 
-## Results
+Results
+======
 
 The performance of the two GNNs was compared for the task of predicting the total energy of the molecule’s conformation - a scalar property. By constraining the Equivariant GNN to predict a scalar output, it becomes overall invariant to the E(3) group. However, the use of higher order geometric tensors in the intermediate representations and operations in the E-GNN, makes internal features equivariant to rotation and inversion. This enables the passage of angular information through the network using rotationally equivariant filters (spherical harmonics) in the node feature convolution. This is the essential difference between the two architectures.
 
@@ -289,7 +300,8 @@ A clear gradient is observed for the main angle and C-C bond! The target gradien
 
 Cool huh? The Equivariant GNN appears to embed the data according to the target value but also according to the systems geometrical structure! This suggests that the model leverages its E(3) equivariant convolution layers to capture and encode information about both the target values and the intricate geometric features of the molecular systems.
 
-## Conclusion
+Conclusion
+======
 
 In conclusion, our exploration has demonstrated the efficiency of the E(3) equivariant GNN, compared to an invariant GNN, in predicting the total energy of molecular conformations. Though both models were compared on predicting energy, a scalar propery, the E-GNN's ability to leverage the inherent symmetries present in the system allowed it to effectively capture and encode the relationship between the arrangement of molecules and their respective energy. This was illustrated through the latent representation visualizations, and was particularly evident in the case of Ethanol. Here, discernible gradients in the latent space were observed, correlating with the target energy value and variations in C-C bond length and main angle. However, interpretability varies among the latent projections for the more complex molecules investigated in this project. Potential improvements could be achieved with additional data and a more expressive equivariant network.
 
