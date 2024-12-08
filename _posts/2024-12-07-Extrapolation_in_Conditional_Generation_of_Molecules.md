@@ -8,7 +8,7 @@ tags:
   - Molecules
 ---
 
-Out-of-Distribution (OOD) generalization in conditional generation of molecules - a case study
+Out-of-Distribution (OOD) generalization in conditional generation of molecules - a case study.
 
 Motivation for Out-of-Distribution (OOD) Generalization for Materials
 ======
@@ -16,5 +16,5 @@ Motivation for Out-of-Distribution (OOD) Generalization for Materials
 OOD What?
 ======
 
-Case Study: \href{https://arxiv.org/abs/2203.17003}{EDM} model
+Case Study: [EDM](https://arxiv.org/abs/2203.17003) model
 ======
