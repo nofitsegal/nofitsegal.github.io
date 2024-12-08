@@ -166,30 +166,31 @@ The learning curves of the two GNNs for each molecule data are presented in the 
 <div class="row mt-3">
   <!-- Row 1 -->
   <div class="col-md-6">
-    {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/energy_pred_asp_t_epoch_new.png" class="img-fluid rounded z-depth-1" width="100%" %}
+    {% include figure.html path="images/proj_equiv_DL6.S898/energy_pred_asp_t_epoch_new.png" class="img-fluid rounded z-depth-1" width="100%" %}
   </div>
   <div class="col-md-6">
-    {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/energy_pred_asp_v_epoch_new.png" class="img-fluid rounded z-depth-1" width="100%" %}
+    {% include figure.html path="images/proj_equiv_DL6.S898/energy_pred_asp_v_epoch_new.png" class="img-fluid rounded z-depth-1" width="100%" %}
   </div>
 </div>
+
 
 <div class="row mt-3">
   <!-- Row 2 -->
   <div class="col-md-6">
-    {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/energy_pred_ethanol_t_epoch_new.png" class="img-fluid rounded z-depth-1" width="100%" %}
+    {% include figure.html path="images/proj_equiv_DL6.S898/energy_pred_ethanol_t_epoch_new.png" class="img-fluid rounded z-depth-1" width="100%" %}
   </div>
   <div class="col-md-6">
-    {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/energy_pred_ethanol_v_epoch_new.png" class="img-fluid rounded z-depth-1" width="100%" %}
+    {% include figure.html path="images/proj_equiv_DL6.S898/energy_pred_ethanol_v_epoch_new.png" class="img-fluid rounded z-depth-1" width="100%" %}
   </div>
 </div>
 
 <div class="row mt-3">
   <!-- Row 3 -->
   <div class="col-md-6">
-    {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/energy_pred_tol_t_epoch_new.png" class="img-fluid rounded z-depth-1" width="100%" %}
+    {% include figure.html path="images/proj_equiv_DL6.S898/energy_pred_tol_t_epoch_new.png" class="img-fluid rounded z-depth-1" width="100%" %}
   </div>
   <div class="col-md-6">
-    {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/energy_pred_tol_v_epoch_new.png" class="img-fluid rounded z-depth-1" width="100%" %}
+    {% include figure.html path="images/proj_equiv_DL6.S898/energy_pred_tol_v_epoch_new.png" class="img-fluid rounded z-depth-1" width="100%" %}
   </div>
 </div>
 
@@ -205,30 +206,30 @@ Next, let's examine the latent representation of the two models! The last layer 
 <div class="row mt-3">
   <!-- Row 1 -->
   <div class="col-md-6">
-    {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/egnn_lat_asp_1.png" class="img-fluid rounded z-depth-1" width="100%" %}
+    {% include figure.html path="images/proj_equiv_DL6.S898/egnn_lat_asp_1.png" class="img-fluid rounded z-depth-1" width="100%" %}
   </div>
   <div class="col-md-6">
-    {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/gnn_lat_asp_1.png" class="img-fluid rounded z-depth-1" width="100%" %}
+    {% include figure.html path="images/proj_equiv_DL6.S898/gnn_lat_asp_1.png" class="img-fluid rounded z-depth-1" width="100%" %}
   </div>
 </div>
 
 <div class="row mt-3">
   <!-- Row 2 -->
   <div class="col-md-6">
-    {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/egnn_lat_eth_2.png" class="img-fluid rounded z-depth-1" width="100%" %}
+    {% include figure.html path="images/proj_equiv_DL6.S898/egnn_lat_eth_2.png" class="img-fluid rounded z-depth-1" width="100%" %}
   </div>
   <div class="col-md-6">
-    {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/gnn_lat_eth_new.png" class="img-fluid rounded z-depth-1" width="100%" %}
+    {% include figure.html path="images/proj_equiv_DL6.S898/gnn_lat_eth_new.png" class="img-fluid rounded z-depth-1" width="100%" %}
   </div>
 </div>
 
 <div class="row mt-3">
   <!-- Row 3 -->
   <div class="col-md-6">
-    {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/egnn_lat_tol_2.png" class="img-fluid rounded z-depth-1" width="100%" %}
+    {% include figure.html path="images/proj_equiv_DL6.S898/egnn_lat_tol_2.png" class="img-fluid rounded z-depth-1" width="100%" %}
   </div>
   <div class="col-md-6">
-    {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/gnn_lat_tol_1.png" class="img-fluid rounded z-depth-1" width="100%" %}
+    {% include figure.html path="images/proj_equiv_DL6.S898/gnn_lat_tol_1.png" class="img-fluid rounded z-depth-1" width="100%" %}
   </div>
 </div>
 
@@ -245,30 +246,30 @@ To assess whether there's molecular structural ordering in the embeddings, we co
 <div class="row mt-3">
   <!-- Row 1 -->
   <div class="col-md-6">
-    {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/eth_cc_t.png" class="img-fluid rounded z-depth-1" width="100%" %}
+    {% include figure.html path="images/proj_equiv_DL6.S898/eth_cc_t.png" class="img-fluid rounded z-depth-1" width="100%" %}
   </div>
   <div class="col-md-6">
-    {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/eth_cc_v.png" class="img-fluid rounded z-depth-1" width="100%" %}
+    {% include figure.html path="images/proj_equiv_DL6.S898/eth_cc_v.png" class="img-fluid rounded z-depth-1" width="100%" %}
   </div>
 </div>
 
 <div class="row mt-3">
   <!-- Row 2 -->
   <div class="col-md-6">
-    {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/eth_co_t.png" class="img-fluid rounded z-depth-1" width="100%" %}
+    {% include figure.html path="images/proj_equiv_DL6.S898/eth_co_t.png" class="img-fluid rounded z-depth-1" width="100%" %}
   </div>
   <div class="col-md-6">
-    {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/eth_co_v.png" class="img-fluid rounded z-depth-1" width="100%" %}
+    {% include figure.html path="images/proj_equiv_DL6.S898/eth_co_v.png" class="img-fluid rounded z-depth-1" width="100%" %}
   </div>
 </div>
 
 <div class="row mt-3">
   <!-- Row 3 -->
   <div class="col-md-6">
-    {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/eth_ang_t.png" class="img-fluid rounded z-depth-1" width="100%" %}
+    {% include figure.html path="images/proj_equiv_DL6.S898/eth_ang_t.png" class="img-fluid rounded z-depth-1" width="100%" %}
   </div>
   <div class="col-md-6">
-    {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/eth_ang_v.png" class="img-fluid rounded z-depth-1" width="100%" %}
+    {% include figure.html path="images/proj_equiv_DL6.S898/eth_ang_v.png" class="img-fluid rounded z-depth-1" width="100%" %}
   </div>
 </div>
 <div class="caption">
@@ -280,20 +281,20 @@ The distributions appear very similar for each variable in the train and validat
 <div class="row mt-3">
   <!-- Row 1 -->
   <div class="col-md-6">
-    {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/egnn_lat_eth_2.png" class="img-fluid rounded z-depth-1" width="100%" %}
+    {% include figure.html path="images/proj_equiv_DL6.S898/egnn_lat_eth_2.png" class="img-fluid rounded z-depth-1" width="100%" %}
   </div>
   <div class="col-md-6">
-    {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/egnn_lat_eth__cc_2.png" class="img-fluid rounded z-depth-1" width="100%" %}
+    {% include figure.html path="images/proj_equiv_DL6.S898/egnn_lat_eth__cc_2.png" class="img-fluid rounded z-depth-1" width="100%" %}
   </div>
 </div>
 
 <div class="row mt-3">
   <!-- Row 2 -->
   <div class="col-md-6">
-    {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/egnn_lat_eth__ang_2.png" class="img-fluid rounded z-depth-1" width="100%" %}
+    {% include figure.html path="images/proj_equiv_DL6.S898/egnn_lat_eth__ang_2.png" class="img-fluid rounded z-depth-1" width="100%" %}
   </div>
   <div class="col-md-6">
-    {% include figure.html path="assets/img/2023-11-08-A-deeper-look-into-equivariance-for-materials-data/egnn_lat_eth__co_2.png" class="img-fluid rounded z-depth-1" width="100%" %}
+    {% include figure.html path="images/proj_equiv_DL6.S898/egnn_lat_eth__co_2.png" class="img-fluid rounded z-depth-1" width="100%" %}
   </div>
 </div>
 
