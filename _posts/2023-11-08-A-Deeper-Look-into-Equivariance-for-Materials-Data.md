@@ -47,15 +47,12 @@ Our focus narrowed down to the molecules Aspirin, Ethanol, and Toluene:
 </div>
 <div align="center" style="display: flex; justify-content: space-around; align-items: center;">
     <div style="text-align: center;">
-        <img src="/images/proj_equiv_DL/aspirin.jpg" width="30%">
         <div>Aspirin (C9H8O4)</div>
     </div>
     <div style="text-align: center;">
-        <img src="/images/proj_equiv_DL/ethanol.jpg" width="30%">
         <div>Ethanol (C2H5OH)</div>
     </div>
     <div style="text-align: center;">
-        <img src="/images/proj_equiv_DL/toluene.jpg" width="30%">
         <div>Toluene (C6H5CH3)</div>
     </div>
 </div>
@@ -65,42 +62,24 @@ Our focus narrowed down to the molecules Aspirin, Ethanol, and Toluene:
 
 The distributions of energy values (kcal/mol) for various conformations of the three molecules, within the training and validation sets, are illustrated in the histograms below.
 
-<figure>
-  <div class="row mt-3">
-    <!-- Row 1 -->
-    <div class="col-md-6">
-      <img src="/images/proj_equiv_DL/hist_asp_t.png" alt="Aspirin Train Set Distribution" class="img-fluid rounded z-depth-1">
+<figure align="center">
+    <div>
+        <img src="/images/proj_equiv_DL/hist_asp_t.png" width="45%">
+        <img src="/images/proj_equiv_DL/hist_asp_v.png" width="45%">
     </div>
-    <div class="col-md-6">
-      <img src="/images/proj_equiv_DL/hist_asp_v.png" alt="Aspirin Validation Set Distribution" class="img-fluid rounded z-depth-1">
+    <div>
+        <img src="/images/proj_equiv_DL/hist_eth_t.png" width="45%">
+        <img src="/images/proj_equiv_DL/hist_eth_v.png" width="45%">
     </div>
-  </div>
-
-  <div class="row mt-3">
-    <!-- Row 2 -->
-    <div class="col-md-6">
-      <img src="/images/proj_equiv_DL/hist_eth_t.png" alt="Ethanol Train Set Distribution" class="img-fluid rounded z-depth-1">
+    <div>
+        <img src="/images/proj_equiv_DL/hist_tol_t.png" width="45%">
+        <img src="/images/proj_equiv_DL/hist_tol_v.png" width="45%">
     </div>
-    <div class="col-md-6">
-      <img src="/images/proj_equiv_DL/hist_eth_v.png" alt="Ethanol Validation Set Distribution" class="img-fluid rounded z-depth-1">
-    </div>
-  </div>
-
-  <div class="row mt-3">
-    <!-- Row 3 -->
-    <div class="col-md-6">
-      <img src="/images/proj_equiv_DL/hist_tol_t.png" alt="Toluene Train Set Distribution" class="img-fluid rounded z-depth-1">
-    </div>
-    <div class="col-md-6">
-      <img src="/images/proj_equiv_DL/hist_tol_v.png" alt="Toluene Validation Set Distribution" class="img-fluid rounded z-depth-1">
-    </div>
-  </div>
-
-  <!-- Caption -->
-  <figcaption class="figure-caption text-center mt-3">
-    Energy (kcal/mol) distributions for Aspirin (C9H8O4), Ethanol (C2H5OH), and Toluene (C6H5CH3) molecules in train and validation sets.
-  </figcaption>
+    <figcaption class="figure-caption text-center mt-3">
+        Energy (kcal/mol) distributions for Aspirin (C9H8O4), Ethanol (C2H5OH), and Toluene (C6H5CH3) molecules in train (left) and validation (right) sets.
+    </figcaption>
 </figure>
+
 
 
 The training set for Aspirin comprises 1000 conformations, while its validation set consists of 500 conformations. Ethanol's training and validation sets each consist of 1000 conformations. Toluene's training set comprises 1000 conformations, and its validation set consists of 500 conformations.
