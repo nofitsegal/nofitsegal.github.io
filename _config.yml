@@ -145,7 +145,7 @@ include:
   - .htaccess
   - _pages
   - files
-  - images
+  # - images
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
