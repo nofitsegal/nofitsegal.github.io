@@ -21,8 +21,8 @@ _Next-Generation AI-Catalyzed Scientific Workflow for Digital Materials Discover
 <!-- [[Code](https://github.com/DanHrmti/ECRL)]  [[Website](https://sites.google.com/view/entity-centric-rl/)]   -->
 <!-- [[Talk](https://youtu.be/1YJCWyLcGHk?t=1)] -->
 
-<br/><br/>
-<h1> Workshop Papers </h1>
+<!-- <br/><br/> -->
+<!-- <h1> Workshop Papers </h1> -->
 
 <!-- <h2> Known Unknowns: Out-of-Distribution Property Prediction in Materials and Molecules </h2>
 **Nofit Segal**\*, Aviv Netanyahu\*, Kevin Greenman, Pulkit Agrawal, Rafael Gomez-Bombarelli \
