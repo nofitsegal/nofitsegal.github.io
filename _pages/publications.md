@@ -14,7 +14,8 @@ author_profile: true
 <h2> Known Unknowns: Out-of-Distribution Property Prediction in Materials and Molecules </h2>
 <img align="right" src="../images/ood_preds_kde_compare.png" width="25%">
 **Nofit Segal**\*, Aviv Netanyahu\*, Kevin Greenman, Pulkit Agrawal, Rafael Gomez-Bombarelli \
-*in submission* \ 
+*in submission* 
+
 _AI for Accelerated Materials Design Workshop, Neurips 2024_ <span style="color:firebrick"> _Spotlight Talk_ </span> \
 _Next-Generation AI-Catalyzed Scientific Workflow for Digital Materials Discovery Symposium, Materials Research Society fall 2024_ \
 [[Paper](https://openreview.net/pdf?id=HkfnueE7Ae)]  
