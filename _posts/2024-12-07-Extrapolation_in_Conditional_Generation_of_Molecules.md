@@ -26,7 +26,7 @@ When considering OOD generalization for materials, one can assess the uniqueness
 <figure class="text-center">
   <img src="/images/proj_ext_gen_mol/hist_prop.png" class="img-fluid" width="45%">
   <figcaption class="figure-caption text-center mt-3">
-    Distribution of Isotropic Polarizability property values in the QM9 database. Three parts of the distribution are specified:  the training data regime (gray), the top 5\% of values marking the extreme in-distribution cases (pink), and an out-of-distribution (OOD) range which is an 2% extension of the training data (red).
+    Distribution of Isotropic Polarizability property values in the QM9 database. Three parts of the distribution are specified:  the training data regime (gray), the top 5% of values marking the extreme in-distribution cases (pink), and an out-of-distribution (OOD) range which is an 2% extension of the training data (red).
   </figcaption>
 </figure>
 
