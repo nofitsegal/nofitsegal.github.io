@@ -58,7 +58,7 @@ Our focus narrowed down to the molecules Aspirin, Ethanol, and Toluene:
 </div>
 
 
-
+ 
 
 The distributions of energy values (kcal/mol) for various conformations of the three molecules, within the training and validation sets, are illustrated in the histograms below.
 <div>
@@ -114,136 +114,94 @@ Results
 The performance of the two GNNs was compared for the task of predicting the total energy of the molecule’s conformation - a scalar property. By constraining the Equivariant GNN to predict a scalar output, it becomes overall invariant to the E(3) group. However, the use of higher order geometric tensors in the intermediate representations and operations in the E-GNN, makes internal features equivariant to rotation and inversion. This enables the passage of angular information through the network using rotationally equivariant filters (spherical harmonics) in the node feature convolution. This is the essential difference between the two architectures.
 
 The learning curves of the two GNNs for each molecule data are presented in the figures below: 
-<div class="row mt-3">
-  <!-- Row 1 -->
-  <div class="col-md-6">
-    <img src="/images/proj_equiv_DL/energy_pred_asp_t_epoch_new.png" alt="Aspirin Train Set Energy Prediction" class="img-fluid rounded z-depth-1" width="100%">
-  </div>
-  <div class="col-md-6">
-    <img src="/images/proj_equiv_DL/energy_pred_asp_v_epoch_new.png" alt="Aspirin Validation Set Energy Prediction" class="img-fluid rounded z-depth-1" width="100%">
-  </div>
+
+<div>
+    <img src="/images/proj_equiv_DL/energy_pred_asp_t_epoch_new.png" width="45%">
+    <img src="/images/proj_equiv_DL/energy_pred_asp_v_epoch_new.png" width="45%">
+</div>
+<div>
+    <img src="/images/proj_equiv_DL/energy_pred_ethanol_t_epoch_new.png" width="45%">
+    <img src="/images/proj_equiv_DL/energy_pred_ethanol_v_epoch_new.png" width="45%">
+</div>
+<div>
+    <img src="/images/proj_equiv_DL/energy_pred_tol_t_epoch_new.png" width="45%">
+    <img src="/images/proj_equiv_DL/energy_pred_tol_v_epoch_new.png" width="45%">
 </div>
 
-<div class="row mt-3">
-  <!-- Row 2 -->
-  <div class="col-md-6">
-    <img src="/images/proj_equiv_DL/energy_pred_ethanol_t_epoch_new.png" alt="Ethanol Train Set Energy Prediction" class="img-fluid rounded z-depth-1" width="100%">
-  </div>
-  <div class="col-md-6">
-    <img src="/images/proj_equiv_DL/energy_pred_ethanol_v_epoch_new.png" alt="Ethanol Validation Set Energy Prediction" class="img-fluid rounded z-depth-1" width="100%">
-  </div>
-</div>
+<figure align="center">
+<figcaption class="figure-caption text-center mt-3">
+        Train (left) and Validation (right) learning curves of Energy (kcal/mol) prediction of Aspirin (top), Ethanol (middle) and Toluene (bottom) conformations.
+    </figcaption>
+</figure>
 
-<div class="row mt-3">
-  <!-- Row 3 -->
-  <div class="col-md-6">
-    <img src="/images/proj_equiv_DL/energy_pred_tol_t_epoch_new.png" alt="Toluene Train Set Energy Prediction" class="img-fluid rounded z-depth-1" width="100%">
-  </div>
-  <div class="col-md-6">
-    <img src="/images/proj_equiv_DL/energy_pred_tol_v_epoch_new.png" alt="Toluene Validation Set Energy Prediction" class="img-fluid rounded z-depth-1" width="100%">
-  </div>
-</div>
-
-<div class="caption">
-    Train (left) and Validation (right) learning curves of Energy (kcal/mol) prediction of Aspirin (top), Ethanol (middle) and Toluene (bottom) conformations.
-</div>
 
 The models were trained for 50 epochs using mean absolute error (MAE) objective for predicting normalized energy (in kcal/mol units). Adam optimizer with a learning rate of 0.01 and learning rate scheduler were employed. The E-GNN achieves a superior MAE rate for all three molecules.
 
 Next, let's examine the latent representation of the two models! The last layer values of the validation data of both models were projected using t-SNE to a 2D representation and color-coded according to the target energy values: 
-<div class="row mt-3">
-  <!-- Row 1 -->
-  <div class="col-md-6">
-    <img src="/images/proj_equiv_DL/egnn_lat_asp_1.png" alt="E-GNN Latent Representation for Aspirin" class="img-fluid rounded z-depth-1" width="100%">
-  </div>
-  <div class="col-md-6">
-    <img src="/images/proj_equiv_DL/gnn_lat_asp_1.png" alt="GNN Latent Representation for Aspirin" class="img-fluid rounded z-depth-1" width="100%">
-  </div>
+
+<div>
+    <img src="/images/proj_equiv_DL/egnn_lat_asp_1.png" width="45%">
+    <img src="/images/proj_equiv_DL/gnn_lat_asp_1.png" width="45%">
+</div>
+<div>
+    <img src="/images/proj_equiv_DL/egnn_lat_eth_2.png" width="45%">
+    <img src="/images/proj_equiv_DL/gnn_lat_eth_new.png" width="45%">
+</div>
+<div>
+    <img src="/images/proj_equiv_DL/egnn_lat_tol_2.png" width="45%">
+    <img src="/images/proj_equiv_DL/gnn_lat_tol_1.png" width="45%">
 </div>
 
-<div class="row mt-3">
-  <!-- Row 2 -->
-  <div class="col-md-6">
-    <img src="/images/proj_equiv_DL/egnn_lat_eth_2.png" alt="E-GNN Latent Representation for Ethanol" class="img-fluid rounded z-depth-1" width="100%">
-  </div>
-  <div class="col-md-6">
-    <img src="/images/proj_equiv_DL/gnn_lat_eth_new.png" alt="GNN Latent Representation for Ethanol" class="img-fluid rounded z-depth-1" width="100%">
-  </div>
-</div>
-
-<div class="row mt-3">
-  <!-- Row 3 -->
-  <div class="col-md-6">
-    <img src="/images/proj_equiv_DL/egnn_lat_tol_2.png" alt="E-GNN Latent Representation for Toluene" class="img-fluid rounded z-depth-1" width="100%">
-  </div>
-  <div class="col-md-6">
-    <img src="/images/proj_equiv_DL/gnn_lat_tol_1.png" alt="GNN Latent Representation for Toluene" class="img-fluid rounded z-depth-1" width="100%">
-  </div>
-</div>
-
-<div class="caption">
-    Latents projections of E-GNN (left) and GNN (right) last layer, of Aspirin (top), Ethanol (middle) and Toluene (bottom) conformations.
-</div>
+<figure align="center">
+<figcaption class="figure-caption text-center mt-3">
+        Latents projections of E-GNN (left) and GNN (right) last layer, of Aspirin (top), Ethanol (middle) and Toluene (bottom) conformations.
+    </figcaption>
+</figure>
 
 A color gradient can be seen in all three projections of the Equivariant GNN; and it is the clearest for Ethanol. The Invariant GNN’s latent projections do not exhibit  a similar structure, perhaps except for Ethanol’s conformations. Moreover, in Ethanol’s case, the GNN projection appears to be quite one-dimensional.
 
 The apparent color gradient according to the target values in the E-GNN latent space is impressive, suggesting that the model leverages this information when embedding data conformations for predictions. Multiple "locations" in the latent space denote various high-energy conformations, indicating that the model considers not only the target energy value but also structural differences.
 
 To assess whether there's molecular structural ordering in the embeddings, we construct system-specific variables for each molecule and visualize the latent space accordingly. Ethanol, with its relatively simple structure, showcases three important variables: the distance between the two Carbons (C-C bond), the distance between Carbon and Oxygen (C-O bond), and the angle formed by the three atoms. The distributions of these variables in Ethanol's train and validation sets are depicted in the figure below: 
-<div class="row mt-3">
-  <!-- Row 1 -->
-  <div class="col-md-6">
-    <img src="/images/proj_equiv_DL/eth_cc_t.png" alt="Ethanol C-C Bond Length (Train)" class="img-fluid rounded z-depth-1" width="100%">
-  </div>
-  <div class="col-md-6">
-    <img src="/images/proj_equiv_DL/eth_cc_v.png" alt="Ethanol C-C Bond Length (Validation)" class="img-fluid rounded z-depth-1" width="100%">
-  </div>
+
+<div>
+    <img src="/images/proj_equiv_DL/eth_cc_t.png" width="45%">
+    <img src="/images/proj_equiv_DL/eth_cc_v.png" width="45%">
+</div>
+<div>
+    <img src="/images/proj_equiv_DL/eth_co_t.png" width="45%">
+    <img src="/images/proj_equiv_DL/eth_co_v.png" width="45%">
+</div>
+<div>
+    <img src="/images/proj_equiv_DL/eth_ang_t.png" width="45%">
+    <img src="/images/proj_equiv_DL/eth_ang_v.png" width="45%">
 </div>
 
-<div class="row mt-3">
-  <!-- Row 2 -->
-  <div class="col-md-6">
-    <img src="/images/proj_equiv_DL/eth_co_t.png" alt="Ethanol C-O Bond Length (Train)" class="img-fluid rounded z-depth-1" width="100%">
-  </div>
-  <div class="col-md-6">
-    <img src="/images/proj_equiv_DL/eth_co_v.png" alt="Ethanol C-O Bond Length (Validation)" class="img-fluid rounded z-depth-1" width="100%">
-  </div>
-</div>
+<figure align="center">
+<figcaption class="figure-caption text-center mt-3">
+        Distributions in train (left) and validation (right) sets of Ethanol, of C-C bond length (top), C-O bond length (middle) and main angle (bottom).
+    </figcaption>
+</figure>
 
-<div class="row mt-3">
-  <!-- Row 3 -->
-  <div class="col-md-6">
-    <img src="/images/proj_equiv_DL/eth_ang_t.png" alt="Ethanol Main Angle (Train)" class="img-fluid rounded z-depth-1" width="100%">
-  </div>
-  <div class="col-md-6">
-    <img src="/images/proj_equiv_DL/eth_ang_v.png" alt="Ethanol Main Angle (Validation)" class="img-fluid rounded z-depth-1" width="100%">
-  </div>
-</div>
 
-<div class="caption">
-    Distributions in train (left) and validation (right) sets of Ethanol, of C-C bond length (top), C-O bond length (middle) and main angle (bottom).
-</div>
 
 The distributions appear very similar for each variable in the train and validation sets. Now, let's examine Ethanol's validation conformations latent projection, color-coded with respect to the target and the three system-specific variables:
-<div class="row mt-3">
-  <!-- Row 1 -->
-  <div class="col-md-6">
-    <img src="/images/proj_equiv_DL/egnn_lat_eth_2.png" alt="E-GNN Latent Projection Ethanol 2" class="img-fluid rounded z-depth-1" width="100%">
-  </div>
-  <div class="col-md-6">
-    <img src="/images/proj_equiv_DL/egnn_lat_eth__cc_2.png" alt="E-GNN Latent Projection Ethanol C-C Bond Length 2" class="img-fluid rounded z-depth-1" width="100%">
-  </div>
+
+<div>
+    <img src="/images/proj_equiv_DL/egnn_lat_eth_2.png" width="45%">
+    <img src="/images/proj_equiv_DL/egnn_lat_eth__cc_2.png" width="45%">
+</div>
+<div>
+    <img src="/images/proj_equiv_DL/egnn_lat_eth__ang_2.png" width="45%">
+    <img src="/images/proj_equiv_DL/egnn_lat_eth__co_2.png" width="45%">
 </div>
 
-<div class="row mt-3">
-  <!-- Row 2 -->
-  <div class="col-md-6">
-    <img src="/images/proj_equiv_DL/egnn_lat_eth__ang_2.png" alt="E-GNN Latent Projection Ethanol Main Angle 2" class="img-fluid rounded z-depth-1" width="100%">
-  </div>
-  <div class="col-md-6">
-    <img src="/images/proj_equiv_DL/egnn_lat_eth__co_2.png" alt="E-GNN Latent Projection Ethanol C-O Bond Length 2" class="img-fluid rounded z-depth-1" width="100%">
-  </div>
-</div>
+<figure align="center">
+<figcaption class="figure-caption text-center mt-3">
+        top left: E-GNN Latent Projection Ethanol. top right: E-GNN Latent Projection Ethanol C-C Bond Length. 
+        bottom left: E-GNN Latent Projection Ethanol Main Angle. bottom right: E-GNN Latent Projection Ethanol C-O Bond Length
+    </figcaption>
+</figure>
 
 
 A clear gradient is observed for the main angle and C-C bond! The target gradient appears from the top left corner to the bottom right; the C-C bond gradient seems to go from bottom left to top right, and the main angle gradient isn’t as linear, appearing to spiral from the bottom to the top right corner clockwise. The C-O bond projection doesn’t seem to follow a discernible gradient, suggesting it's not as influential on the target as the other two variables.
