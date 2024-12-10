@@ -43,10 +43,10 @@ At training, noise is added to a datapoint \( (x,h) \) using \( q(z_t|x,h) \) fo
 </figure>
 
 For the model to generalize well across molecular data, it needs to be \textbf{invariant} with respect to the E(3) group, which includes all 3D Euclidean symmetries, i.e. rotations, translations, and inversions. However, to account for chiral molecules, SE(3) invariance should be considered. The premise of this work relies on the following theorem:
-------
+
+
 **Theorem:**  
 If \\( x \sim p(x) \\) is invariant to a group and the transition probabilities of a Markov Chain \\( y \sim p(y \mid x)\\) are equivariant, then the marginal distribution of \\( y \\) at any time step is invariant to group transformations as well.
-------
 
 This means that if the standard noise \\(p(z_T)\\) is invariant to E(3) and the neural network used to parameterize the diffusion process \\(p(z_{t-1} \mid z_t)\\) is equivariant to E(3), then the marginal distribution \\(p(x)\\) of the output of the denoising model will be invariant as desired!
 
