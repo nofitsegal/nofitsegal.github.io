@@ -23,6 +23,14 @@ _Next-Generation AI-Catalyzed Scientific Workflow for Digital Materials Discover
 <!-- [[Talk](https://youtu.be/1YJCWyLcGHk?t=1)] -->
 
 <!-- <br/><br/> -->
+
+<h2> Lanthanoid coordination compounds as diverse self-templating agents towards hierarchically porous Fe–N–C electrocatalysts </h2>
+<img align="right" src="../images/Lanthanoid/process.png" width="25%">
+Itamar Salton, Karina Ioffe, Tomer Y Burshtein, Eliyahu M Farber, Nicola M Seraphim, **Nofit Segal**, David Eisenberg \
+_Materials Advances 2022_ \
+[[Paper](https://pubs.rsc.org/en/content/articlepdf/2022/ma/d2ma00596d)]  
+
+<!-- <br/><br/> -->
 <!-- <h1> Workshop Papers </h1> -->
 
 <!-- <h2> Known Unknowns: Out-of-Distribution Property Prediction in Materials and Molecules </h2>
