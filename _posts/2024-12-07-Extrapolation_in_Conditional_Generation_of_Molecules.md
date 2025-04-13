@@ -21,7 +21,7 @@ The discovery of such materials, those with properties beyond the range of mater
 
 OOD What?
 ======
-When considering OOD generalization for materials, one can assess the uniqueness of generated materials in relation to the chemical or structural space of the training data, or evaluate the uniqueness of the property values of these materials. In our context, OOD materials are defined as those with \textbf{property values that fall outside the distribution of the known data} (i.e., training data). These materials may also correspond to novel chemical or structural spaces, though this is not always the case. 
+When considering OOD generalization for materials, one can assess the uniqueness of generated materials in relation to the chemical or structural space of the training data, or evaluate the uniqueness of the property values of these materials. In our context, OOD materials are defined as those with **property values that fall outside the distribution of the known data** (i.e., training data). These materials may also correspond to novel chemical or structural spaces, though this is not always the case. 
 
 <figure class="text-center">
   <img src="/images/proj_ext_gen_mol/hist_prop.png" class="img-fluid" width="45%">
@@ -42,7 +42,7 @@ At training, noise is added to a datapoint \( (x,h) \) using \( q(z_t|x,h) \) fo
   </figcaption>
 </figure>
 
-For the model to generalize well across molecular data, it needs to be \textbf{invariant} with respect to the E(3) group, which includes all 3D Euclidean symmetries, i.e. rotations, translations, and inversions. However, to account for chiral molecules, SE(3) invariance should be considered. The premise of this work relies on the following theorem:
+For the model to generalize well across molecular data, it needs to be **invariant** with respect to the E(3) group, which includes all 3D Euclidean symmetries, i.e. rotations, translations, and inversions. However, to account for chiral molecules, SE(3) invariance should be considered. The premise of this work relies on the following theorem:
 
 
 **Theorem:**  
