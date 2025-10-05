@@ -16,10 +16,14 @@ author_profile: true
 **Nofit Segal**, Akshay Subramanian, Minga Li, Benjamin Kurt Miller, Rafael Gomez-Bombarelli\
 _AI for Accelerated Materials Design Workshop, NeurIPS 2025_ \ 
 
+
+
 <h2> Towards Generating Stable Materials via Large Language Models with Reinforcement Learning Finetuning </h2>
 <img align="right" src="../images/RL-Mat/binary_phase_diagram_Ca_Pd.png" width="25%">
 Zhang-Wei Hong\*, **Nofit Segal**\*, Raina Wu, Aviv Netanyahu, Hoje Chun, Rafael Gomez-Bombarelli, Pulkit Agrawal  \
 _The Reach and Limits of AI for Scientific Discovery, NeurIPS 2025_ \
+
+
 
 <h2> Known Unknowns: Out-of-Distribution Property Prediction in Materials and Molecules </h2>
 <img align="right" src="../images/matex/ood_preds_kde_compare.png" width="25%">
