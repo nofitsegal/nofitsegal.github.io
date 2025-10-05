@@ -21,4 +21,4 @@ News
 **[Oct 2025]** Our work on probing crystal structure–diffraction mapping through a gradient-descent lens was accepted to AI4Mat at Neurips.\
 **[Oct 2025]** Our work on using reinforcement learning with energy-based rewards for stable materials generation was accepted to AI4Science at Neurips.\
 **[Sep 2025]** Our work on OOD Generalization for Materials and Molecules was accepted to NPJ Computational Materials.\
-**[Dec 2024]** Presented our work on OOD Generalization for Materials and Molecules data as a **Spotlight Talk** at [AI4Mat at NeurIPS](https://sites.google.com/view/ai4mat).\
+**[Dec 2024]** Presented our work on OOD Generalization for Materials and Molecules data as a **Spotlight Talk** at [AI4Mat at NeurIPS](https://sites.google.com/view/ai4mat).
