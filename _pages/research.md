@@ -44,5 +44,5 @@ _Materials Advances 2022_ \
 </div>
 
 
-\* Indicates equal contribution
+<p>\* Indicates equal contribution</p>
 
