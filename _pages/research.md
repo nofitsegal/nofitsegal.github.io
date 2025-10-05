@@ -12,22 +12,22 @@ author_profile: true
 {% include base_path %}
 
 <div style="overflow:auto; margin-bottom:2em;">
-<h2> The Loss Landscape of XRD-Based Structure Optimization Is Too Rough for Gradient Descent </h2>
-<img align="right" src="../images/XRD-GD/BPO4_xrd_agr_new2.png" style="float:right; width:25%; margin-left:1em; margin-bottom:0.5em;">
-**Nofit Segal**, Akshay Subramanian, Minga Li, Benjamin Kurt Miller, Rafael Gomez-Bombarelli\
-_AI for Accelerated Materials Design Workshop, NeurIPS 2025_ \ 
+  <h2>The Loss Landscape of XRD-Based Structure Optimization Is Too Rough for Gradient Descent</h2>
+  <img src="../images/XRD-GD/BPO4_xrd_agr_new2.png" style="float:right; width:25%; margin-left:1em; margin-bottom:0.5em;">
+  <p><strong>Nofit Segal</strong>, Akshay Subramanian, Minga Li, Benjamin Kurt Miller, Rafael Gomez-Bombarelli<br>
+  <em>AI for Accelerated Materials Design Workshop, NeurIPS 2025</em></p>
 </div>
 
 <div style="overflow:auto; margin-bottom:2em;">
 <h2> Towards Generating Stable Materials via Large Language Models with Reinforcement Learning Finetuning </h2>
-<img align="right" src="../images/RL-Mat/binary_phase_diagram_Ca_Pd.png" style="float:right; width:25%; margin-left:1em; margin-bottom:0.5em;">
+<img align="right" src="../images/RL-Mat/binary_phase_diagram_Ca_Pd.png" width="25%">
 Zhang-Wei Hong\*, **Nofit Segal**\*, Raina Wu, Aviv Netanyahu, Hoje Chun, Rafael Gomez-Bombarelli, Pulkit Agrawal  \
 _The Reach and Limits of AI for Scientific Discovery, NeurIPS 2025_ \
 </div>
 
 <div style="overflow:auto; margin-bottom:2em;">
 <h2> Known Unknowns: Out-of-Distribution Property Prediction in Materials and Molecules </h2>
-<img src="../images/matex/ood_preds_kde_compare.png" style="float:right; width:25%; margin-left:1em; margin-bottom:0.5em;">
+<img src="../images/matex/ood_preds_kde_compare.png" width="25%">
 **Nofit Segal**\*, Aviv Netanyahu\*, Kevin Greenman, Pulkit Agrawal, Rafael Gomez-Bombarelli \
 _NPJ Computationa Materials 2025_ \ 
 _AI for Accelerated Materials Design Workshop, NeurIPS 2024_ <span style="color:firebrick"> _Spotlight Talk_ </span> \
@@ -37,7 +37,7 @@ _Next-Generation AI-Catalyzed Scientific Workflow for Digital Materials Discover
 
 <div style="overflow:auto; margin-bottom:2em;">
 <h2> Lanthanoid coordination compounds as diverse self-templating agents towards hierarchically porous Fe–N–C electrocatalysts </h2>
-<img align="right" src="../images/Lanthanoid/process.png" style="float:right; width:25%; margin-left:1em; margin-bottom:0.5em;">
+<img align="right" src="../images/Lanthanoid/process.png" width="25%">
 Itamar Salton, Karina Ioffe, Tomer Y Burshtein, Eliyahu M Farber, Nicola M Seraphim, **Nofit Segal**, David Eisenberg \
 _Materials Advances 2022_ \
 [[Paper](https://pubs.rsc.org/en/content/articlepdf/2022/ma/d2ma00596d)]  
