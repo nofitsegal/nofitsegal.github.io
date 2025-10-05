@@ -19,30 +19,29 @@ author_profile: true
 </div>
 
 <div style="overflow:auto; margin-bottom:2em;">
-<h2> Towards Generating Stable Materials via Large Language Models with Reinforcement Learning Finetuning </h2>
-<img align="right" src="../images/RL-Mat/binary_phase_diagram_Ca_Pd.png" width="25%">
-Zhang-Wei Hong\*, **Nofit Segal**\*, Raina Wu, Aviv Netanyahu, Hoje Chun, Rafael Gomez-Bombarelli, Pulkit Agrawal  \
-_The Reach and Limits of AI for Scientific Discovery, NeurIPS 2025_ \
+  <h2>Towards Generating Stable Materials via Large Language Models with Reinforcement Learning Finetuning</h2>
+  <img src="../images/RL-Mat/binary_phase_diagram_Ca_Pd.png" style="float:right; width:25%; margin-left:1em; margin-bottom:0.5em;">
+  <p>Zhang-Wei Hong*, <strong>Nofit Segal*</strong>, Raina Wu, Aviv Netanyahu, Hoje Chun, Rafael Gomez-Bombarelli, Pulkit Agrawal<br>
+  <em>The Reach and Limits of AI for Scientific Discovery, NeurIPS 2025</em></p>
 </div>
 
 <div style="overflow:auto; margin-bottom:2em;">
-<h2> Known Unknowns: Out-of-Distribution Property Prediction in Materials and Molecules </h2>
-<img src="../images/matex/ood_preds_kde_compare.png" width="25%">
-**Nofit Segal**\*, Aviv Netanyahu\*, Kevin Greenman, Pulkit Agrawal, Rafael Gomez-Bombarelli \
-_NPJ Computationa Materials 2025_ \ 
-_AI for Accelerated Materials Design Workshop, NeurIPS 2024_ <span style="color:firebrick"> _Spotlight Talk_ </span> \
-_Next-Generation AI-Catalyzed Scientific Workflow for Digital Materials Discovery Symposium, Materials Research Society (MRS), Fall 2024_ \
-[[Paper](https://arxiv.org/abs/2502.05970)]  [[code](https://github.com/learningmatter-mit/matex)]
+  <h2>Known Unknowns: Out-of-Distribution Property Prediction in Materials and Molecules</h2>
+  <img src="../images/matex/ood_preds_kde_compare.png" style="float:right; width:25%; margin-left:1em; margin-bottom:0.5em;">
+  <p><strong>Nofit Segal*</strong>, Aviv Netanyahu*, Kevin Greenman, Pulkit Agrawal, Rafael Gomez-Bombarelli<br>
+  <em>NPJ Computational Materials 2025</em><br>
+  <em>AI for Accelerated Materials Design Workshop, NeurIPS 2024</em> <span style="color:firebrick;">_Spotlight Talk_</span><br>
+  <em>Next-Generation AI-Catalyzed Scientific Workflow for Digital Materials Discovery Symposium, Materials Research Society (MRS), Fall 2024</em><br>
+  <a href="https://arxiv.org/abs/2502.05970">Paper</a> | <a href="https://github.com/learningmatter-mit/matex">Code</a></p>
 </div>
 
 <div style="overflow:auto; margin-bottom:2em;">
-<h2> Lanthanoid coordination compounds as diverse self-templating agents towards hierarchically porous Fe–N–C electrocatalysts </h2>
-<img align="right" src="../images/Lanthanoid/process.png" width="25%">
-Itamar Salton, Karina Ioffe, Tomer Y Burshtein, Eliyahu M Farber, Nicola M Seraphim, **Nofit Segal**, David Eisenberg \
-_Materials Advances 2022_ \
-[[Paper](https://pubs.rsc.org/en/content/articlepdf/2022/ma/d2ma00596d)]  
+  <h2>Lanthanoid coordination compounds as diverse self-templating agents towards hierarchically porous Fe–N–C electrocatalysts</h2>
+  <img src="../images/Lanthanoid/process.png" style="float:right; width:25%; margin-left:1em; margin-bottom:0.5em;">
+  <p>Itamar Salton, Karina Ioffe, Tomer Y Burshtein, Eliyahu M Farber, Nicola M Seraphim, <strong>Nofit Segal</strong>, David Eisenberg<br>
+  <em>Materials Advances 2022</em><br>
+  <a href="https://pubs.rsc.org/en/content/articlepdf/2022/ma/d2ma00596d">Paper</a></p>
 </div>
 
-
-<p>\* Indicates equal contribution</p>
+<p>* Indicates equal contribution</p>
 
