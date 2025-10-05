@@ -12,13 +12,13 @@ I am a PhD student in the joint program of the Materials Science and Engineering
 I am passionate about developing practical ML tools for materials inverse design, focusing on both predictive
 and generative strategies. 
 
-Research questions I am currently drawn to involve learning representations and incorporate structure in learning algorithms that facilitate out-of-distribution (OOD) generalization for materials.
+Research questions I am currently drawn to involve crystal structure prediction from spectroscopic techniques, and developing representation learning methods that incorporate structure to improve out-of-distribution generalization for materials.
 
 I received my B.Sc. in Materials Science and Engineering at the [Technion](https://www.technion.ac.il/en/home-2/), supported by the [Technnion Rothschild Excellence Fellowship](https://excellence.technion.ac.il/en/).
 
 News
 ======
-**[Feb 2025]** Full Preprint of our work on OOD Generalization is now avaialble on [arxiv](https://arxiv.org/abs/2502.05970).\
-**[Dec 2024]** Presenting our work on OOD Generalization for Materials and Molecules data at [AI4Mat at NeurIPS](https://sites.google.com/view/ai4mat).\
-**[Dec 2024]** Presenting our work on OOD Generalization for Materials and Molecules at [MRS](https://www.mrs.org/meetings-events/annual-meetings/2024-mrs-fall-meeting/call-for-papers?gad_source=1&gclid=Cj0KCQiApNW6BhD5ARIsACmEbkVhGfYY52urnhngGlsdavrvaJ48J806eI7jw5zwUc_h-ciAbkq55TMaAuwLEALw_wcB).\
-**[Oct 2024]** Our paper on OOD Generalization for Materials data has been accepted to the AI4Mat Workshop at NeurIPS 2024 as a **Spotlight Talk**.
+**[Oct 2025]** Our work on probing crystal structure–diffraction mapping through a gradient-descent lens was accepted to AI4Mat at Neurips.\
+**[Oct 2025]** Our work on using reinforcement learning with energy-based rewards for stable materials generation was accepted to AI4Science at Neurips.\
+**[Sep 2025]** Our work on OOD Generalization for Materials and Molecules was accepted to NPJ Computational Materials.\
+**[Dec 2024]** Presented our work on OOD Generalization for Materials and Molecules data as a **Spotlight Talk** at [AI4Mat at NeurIPS](https://sites.google.com/view/ai4mat).\
