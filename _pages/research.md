@@ -1,7 +1,7 @@
 ---
 layout: archive
-title: "Publications"
-permalink: /publications/
+title: "Research"
+permalink: /research/
 author_profile: true
 ---
 
@@ -10,6 +10,8 @@ author_profile: true
 [//]: # ({% endif %})
 
 {% include base_path %}
+
+
 
 <h2> Known Unknowns: Out-of-Distribution Property Prediction in Materials and Molecules </h2>
 <img align="right" src="../images/ood_preds_kde_compare.png" width="25%">
