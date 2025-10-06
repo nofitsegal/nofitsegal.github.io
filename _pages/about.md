@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a PhD student in the joint program of the Materials Science and Engineering department (DMSE) and Center for Computational Science (CSE) at [MIT](https://dmse.mit.edu/) advised by Prof. [Rafael Gomez-Bombarelli](https://dmse.mit.edu/faculty/rafael-gomez-bombarelli/).
+I am a PhD student in the joint program of the Materials Science and Engineering department (DMSE) and the Center for Computational Science (CSE) at [MIT](https://dmse.mit.edu/) advised by Prof. [Rafael Gomez-Bombarelli](https://dmse.mit.edu/faculty/rafael-gomez-bombarelli/).
 
 I am passionate about developing practical ML tools for materials inverse design, focusing on both predictive
 and generative strategies. 

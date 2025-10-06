@@ -30,7 +30,7 @@ author_profile: true
   <img src="../images/matex/ood_preds_kde_compare.png" style="float:right; width:25%; margin-left:1em; margin-bottom:0.5em;">
   <p><strong>Nofit Segal*</strong>, Aviv Netanyahu*, Kevin Greenman, Pulkit Agrawal, Rafael Gomez-Bombarelli<br>
   <em>NPJ Computational Materials 2025</em><br>
-  <em>AI for Accelerated Materials Design Workshop, NeurIPS 2024</em> <span style="color:firebrick;">_Spotlight Talk_</span><br>
+  <em>AI for Accelerated Materials Design Workshop, NeurIPS 2024</em> <span style="color:firebrick;">Spotlight Talk</span><br>
   <em>Next-Generation AI-Catalyzed Scientific Workflow for Digital Materials Discovery Symposium, Materials Research Society (MRS), Fall 2024</em><br>
   <a href="https://arxiv.org/abs/2502.05970">Paper</a> | <a href="https://github.com/learningmatter-mit/matex">Code</a></p>
 </div>
