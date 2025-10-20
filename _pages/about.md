@@ -12,7 +12,7 @@ I am a PhD student in the joint program of the Materials Science and Engineering
 I am passionate about developing practical ML tools for materials inverse design, focusing on both predictive
 and generative strategies. 
 
-Research questions I am currently drawn to involve crystal structure prediction from spectroscopic techniques, and developing representation learning methods that incorporate algorithmic structure desinged to improve out-of-distribution generalization for materials.
+I’m currently drawn to research questions involving the prediction of crystal structures from spectroscopic data and the design of representation learning models whose algorithmic structure enables better out-of-distribution generalization for materials.
 
 I received my B.Sc. in Materials Science and Engineering at the [Technion](https://www.technion.ac.il/en/home-2/), supported by the [Technnion Rothschild Excellence Fellowship](https://excellence.technion.ac.il/en/).
 
