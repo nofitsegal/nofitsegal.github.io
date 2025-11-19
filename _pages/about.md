@@ -1,11 +1,15 @@
 ---
 permalink: /
 title: "Hi, I'm Nofit"
+seo_title: "Nofit Segal"
+description: "Homepage of Nofit Segal — MIT PhD student researching machine learning for spectroscopy, crystal structure prediction, and materials inverse design."
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
+
+<h1 style="display:none;">Nofit Segal</h1>
 
 I am a PhD student in the joint program of the Materials Science and Engineering department (DMSE) and the Center for Computational Science (CSE) at [MIT](https://dmse.mit.edu/) advised by Prof. [Rafael Gomez-Bombarelli](https://dmse.mit.edu/faculty/rafael-gomez-bombarelli/).
 
