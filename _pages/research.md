@@ -15,7 +15,7 @@ author_profile: true
   <h2>The Loss Landscape of XRD-Based Structure Optimization Is Too Rough for Gradient Descent</h2>
   <img src="../images/XRD-GD/Na3MnCoNi06_xrd_agr.png" style="float:right; width:33%; margin-left:1em; margin-bottom:0.5em;">
   <p><strong>Nofit Segal</strong>, Akshay Subramanian, Mingda Li, Benjamin Kurt Miller, Rafael Gomez-Bombarelli<br>
-  <em>AI for Accelerated Materials Design Workshop, NeurIPS 2025</em></p>
+  <em>AI for Accelerated Materials Design Workshop, NeurIPS 2025</em><span style="color:firebrick;">Oral Presentation</span><br></p>
 </div>
 
 <div style="overflow:auto; margin-bottom:0.5em;">
