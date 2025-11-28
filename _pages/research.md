@@ -13,7 +13,7 @@ author_profile: true
 
 <div style="overflow:auto; margin-bottom:0.5em;">
   <h2>The Loss Landscape of XRD-Based Structure Optimization Is Too Rough for Gradient Descent</h2>
-  <img src="../images/XRD-GD/BPO4_xrd_agr_new2.png" style="float:right; width:33%; margin-left:1em; margin-bottom:0.5em;">
+  <img src="../images/XRD-GD/Na3MnCoNi06_xrd_agr.png" style="float:right; width:33%; margin-left:1em; margin-bottom:0.5em;">
   <p><strong>Nofit Segal</strong>, Akshay Subramanian, Mingda Li, Benjamin Kurt Miller, Rafael Gomez-Bombarelli<br>
   <em>AI for Accelerated Materials Design Workshop, NeurIPS 2025</em></p>
 </div>
@@ -21,7 +21,7 @@ author_profile: true
 <div style="overflow:auto; margin-bottom:0.5em;">
   <h2>Towards Generating Stable Materials via Large Language Models with Reinforcement Learning Finetuning</h2>
   <img src="../images/RL-Mat/binary_phase_diagram_Ca_Pd.png" style="float:right; width:33%; margin-left:1em; margin-bottom:0.5em;">
-  <p>Zhang-Wei Hong*, <strong>Nofit Segal*</strong>, Raina Wu, Aviv Netanyahu, Hoje Chun, Rafael Gomez-Bombarelli, Pulkit Agrawal<br>
+  <p>Zhang-Wei Hong*, <strong>Nofit Segal*</strong>, Aviv Netanyahu, Hoje Chun, Rafael Gomez-Bombarelli, Pulkit Agrawal<br>
   <em>The Reach and Limits of AI for Scientific Discovery, NeurIPS 2025</em></p>
 </div>
 
