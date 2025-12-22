@@ -17,7 +17,7 @@ I am passionate about developing practical machine-learning tools for materials 
 
 My current research focuses on predicting crystal structures from spectroscopic data and designing representation-learning models whose algorithmic structure supports stronger out-of-distribution generalization for materials.
 
-I received my B.Sc. in Materials Science and Engineering from the [Technion](https://www.technion.ac.il/en/home-2/), supported by the [Technnion Rothschild Excellence Fellowship](https://excellence.technion.ac.il/).
+I received my B.Sc. in Materials Science and Engineering from the [Technion](https://www.technion.ac.il/en/home-2/), supported by the [Technion Rothschild Excellence Fellowship](https://excellence.technion.ac.il/).
 
 News
 ======
