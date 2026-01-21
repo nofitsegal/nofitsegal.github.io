@@ -15,22 +15,22 @@ author_profile: true
   <h2>The Loss Landscape of XRD-Based Structure Optimization Is Too Rough for Gradient Descent</h2>
   <img src="../images/XRD-GD/Na3MnCoNi06_xrd_agr.png" style="float:right; width:33%; margin-left:1em; margin-bottom:0.5em;">
   <p><strong>Nofit Segal</strong>, Akshay Subramanian, Mingda Li, Benjamin Kurt Miller, Rafael Gomez-Bombarelli<br>
-  <em>AI for Accelerated Materials Design (AI4Mat), NeurIPS 2025</em> <span style="color:firebrick;">Oral Presentation</span><br></p>
-  <a href="https://arxiv.org/abs/2512.04036">Paper</a> | <a href="https://github.com/learningmatter-mit/XRD-GD">Code</a></p>
+  <em>AI for Accelerated Materials Design (AI4Mat), NeurIPS 2025</em> <span style="color:firebrick;">Oral Presentation</span><br>
+  <a href="https://arxiv.org/abs/2512.04036">Paper</a> | <a href="https://github.com/learningmatter-mit/XRD-GD">Code</a>
 </div>
 
 <div style="overflow:auto; margin-bottom:0.5em;">
   <h2>Towards Generating Stable Materials via Large Language Models with Reinforcement Learning Finetuning</h2>
   <img src="../images/RL-Mat/binary_phase_diagram_Ca_Pd.png" style="float:right; width:33%; margin-left:1em; margin-bottom:0.5em;">
-  <p>Zhang-Wei Hong*, <strong>Nofit Segal*</strong>, Aviv Netanyahu, Hoje Chun, Rafael Gomez-Bombarelli, Pulkit Agrawal<br>
-  <em>The Reach and Limits of AI for Scientific Discovery (AI4Science), NeurIPS 2025</em></p>
+  <p>Zhang-Wei Hong*, <strong>Nofit Segal</strong>*, Aviv Netanyahu, Hoje Chun, Rafael Gomez-Bombarelli, Pulkit Agrawal<br>
+  <em>The Reach and Limits of AI for Scientific Discovery (AI4Science), NeurIPS 2025</em>
   <a href="https://openreview.net/pdf?id=Hkr2OfTjAc">Paper</a>
 </div>
 
 <div style="overflow:auto; margin-bottom:0.5em;">
   <h2>Known Unknowns: Out-of-Distribution Property Prediction in Materials and Molecules</h2>
   <img src="../images/matex/ood_preds_kde_compare.png" style="float:right; width:33%; margin-left:1em; margin-bottom:0.5em;">
-  <p><strong>Nofit Segal*</strong>, Aviv Netanyahu*, Kevin Greenman, Pulkit Agrawal, Rafael Gomez-Bombarelli<br>
+  <p><strong>Nofit Segal</strong>*, Aviv Netanyahu*, Kevin Greenman, Pulkit Agrawal, Rafael Gomez-Bombarelli<br>
   <em>NPJ Computational Materials 2025</em><br>
   <em>AI for Accelerated Materials Design (AI4Mat), NeurIPS 2024</em> <span style="color:firebrick;">Spotlight Talk</span><br>
   <em>Next-Generation AI-Catalyzed Scientific Workflow for Digital Materials Discovery Symposium, Materials Research Society (MRS), Fall 2024</em><br>
