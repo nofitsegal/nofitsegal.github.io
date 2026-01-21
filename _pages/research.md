@@ -16,6 +16,7 @@ author_profile: true
   <img src="../images/XRD-GD/Na3MnCoNi06_xrd_agr.png" style="float:right; width:33%; margin-left:1em; margin-bottom:0.5em;">
   <p><strong>Nofit Segal</strong>, Akshay Subramanian, Mingda Li, Benjamin Kurt Miller, Rafael Gomez-Bombarelli<br>
   <em>AI for Accelerated Materials Design (AI4Mat), NeurIPS 2025</em> <span style="color:firebrick;">Oral Presentation</span><br></p>
+  <a href="https://arxiv.org/abs/2512.04036">Paper</a> | <a href="https://github.com/learningmatter-mit/XRD-GD">Code</a></p>
 </div>
 
 <div style="overflow:auto; margin-bottom:0.5em;">
@@ -23,6 +24,7 @@ author_profile: true
   <img src="../images/RL-Mat/binary_phase_diagram_Ca_Pd.png" style="float:right; width:33%; margin-left:1em; margin-bottom:0.5em;">
   <p>Zhang-Wei Hong*, <strong>Nofit Segal*</strong>, Aviv Netanyahu, Hoje Chun, Rafael Gomez-Bombarelli, Pulkit Agrawal<br>
   <em>The Reach and Limits of AI for Scientific Discovery (AI4Science), NeurIPS 2025</em></p>
+  <a href="https://openreview.net/pdf?id=Hkr2OfTjAc">Paper</a>
 </div>
 
 <div style="overflow:auto; margin-bottom:0.5em;">
@@ -32,7 +34,7 @@ author_profile: true
   <em>NPJ Computational Materials 2025</em><br>
   <em>AI for Accelerated Materials Design (AI4Mat), NeurIPS 2024</em> <span style="color:firebrick;">Spotlight Talk</span><br>
   <em>Next-Generation AI-Catalyzed Scientific Workflow for Digital Materials Discovery Symposium, Materials Research Society (MRS), Fall 2024</em><br>
-  <a href="https://arxiv.org/abs/2502.05970">Paper</a> | <a href="https://github.com/learningmatter-mit/matex">Code</a></p>
+  <a href="https://www.nature.com/articles/s41524-025-01808-x">Paper</a> | <a href="https://github.com/learningmatter-mit/matex">Code</a></p>
 </div>
 
 <div style="overflow:auto; margin-bottom:0.5em;">
