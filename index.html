@@ -1,0 +1,406 @@
+<!DOCTYPE HTML>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Nofit Segal</title>
+
+  <meta name="author" content="Nofit Segal">
+  <meta name="description" content="Homepage of Nofit Segal, MIT PhD student researching machine learning for spectroscopy, crystal structure prediction, and materials inverse design.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="icon" href="files/favicon.ico">
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-content {
+      max-width: 90%;
+      max-height: 90vh;
+      cursor: pointer;
+      background-color: #ffffff;
+    }
+
+    .publication-image {
+      cursor: zoom-in;
+      transition: transform 0.2s;
+    }
+
+    .publication-image:hover {
+      transform: scale(1.05);
+    }
+
+    .hr-gradient {
+      border: 0;
+      height: 1px;
+      margin: 1.5rem 0;
+      background: linear-gradient(to right, transparent, rgba(0,0,0,0.4), transparent);
+    }
+  </style>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JDD76CPE4W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JDD76CPE4W');
+</script>
+
+<script type="text/javascript">
+function openModal(imgSrc) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    modalImg.src = imgSrc;
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+}
+
+function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.classList.remove('show');
+    document.body.style.overflow = ''; // Restore scrolling
+}
+
+// Close modal when pressing escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeModal();
+    }
+});
+</script>
+
+<body>
+  <!-- Modal for enlarged images -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <img id="modalImage" class="modal-content">
+  </div>
+
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+              <p style="text-align:center">
+                <name>Nofit Segal</name>
+              </p>
+              <p>
+                I am a PhD student in the joint program of the Department of Materials Science and Engineering (<a href="https://dmse.mit.edu/">DMSE</a>) and the Center for Computational Science and Engineering (<a href="https://cse.mit.edu/">CSE</a>) at <a href="https://www.mit.edu/">MIT</a>, advised by Prof. <a href="https://dmse.mit.edu/people/faculty/rafael-gomez-bombarelli/">Rafael Gomez-Bombarelli</a>.
+              </p>
+              <p>
+                I am passionate about developing practical <strong><em>machine-learning</em></strong> tools for <strong><em>materials inverse design</em></strong>, spanning both predictive and generative approaches.
+                My current research focuses on predicting <strong><em>crystal structures from spectroscopic data</em></strong> and designing representation-learning models whose algorithmic structure supports stronger <strong><em>out-of-distribution generalization</em></strong> for materials.
+              </p>
+              <hr class="hr-gradient">
+              <p>
+                I received my B.Sc. in Materials Science and Engineering from the <a href="https://www.technion.ac.il/en/home-2/">Technion - Israel Institute of Technology</a>, supported by the <a href="https://excellence.technion.ac.il/">Technion Rothschild Excellence Fellowship</a>.
+              </p>
+              <p style="text-align:center">
+                <a href="mailto:nofit@mit.edu">Email</a> &nbsp;/&nbsp;
+                <a href="https://scholar.google.com/citations?user=0EAKygUAAAAJ">Google Scholar</a> &nbsp;/&nbsp;
+                <a href="https://www.linkedin.com/in/nofit-segal/">LinkedIn</a> &nbsp;/&nbsp;
+                <a href="https://github.com/nofitsegal">Github</a>
+              </p>
+            </td>
+            <td style="padding:2.5%;width:35%;max-width:35%;vertical-align:middle;text-align:center">
+                <a href="files/headshot.jpg"><img style="width:100%;max-width:240px;height:auto" alt="profile photo" src="files/headshot.jpg"></a>
+            </td>
+          </tr>
+        </tbody></table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr><td>
+              <heading>News</heading>
+              <ul>
+                <li>Two workshop papers accepted to the RPS Workshop at NeurIPS 2026, one as a <strong>Spotlight Talk</strong>. (2026)</li>
+                <li>Our work on learning lattice parameters from powder XRD using invariants has been accepted to <em>Acta Crystallographica Section A</em>. (2026)</li>
+                <li>Our work on probing the crystal structure&ndash;diffraction mapping through a gradient-descent lens has been accepted to <em>Digital Discovery</em>. (2026)</li>
+                <li>Our work on probing the crystal structure&ndash;diffraction mapping through a gradient-descent lens has been accepted as an <strong>Oral Presentation</strong> to <a href="https://sites.google.com/view/ai4mat">AI4Mat at NeurIPS 2025</a>. (October 2025)</li>
+                <li>Our work on using reinforcement learning with energy-based rewards for stable materials generation has been accepted to <a href="https://ai4sciencecommunity.github.io/">AI4Science at NeurIPS 2025</a>. (October 2025)</li>
+                <li>Our work on out-of-distribution property prediction for materials and molecules has been accepted to <em>npj Computational Materials</em>. (September 2025)</li>
+              </ul>
+          </td></tr>
+        </tbody></table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr><td>
+              <heading>Publications</heading>
+              <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                <tr>
+                  <td style="padding:20px;width:35%;vertical-align:middle">
+                    <img src="files/publications/pxrd_bench.png" style="width:100%;max-width:260px;height:auto" class="publication-image" onclick="openModal(this.src)">
+                  </td>
+                  <td style="padding:20px;width:65%;vertical-align:middle">
+                    <a href="https://arxiv.org/abs/2610.16480">
+                      <papertitle>PXRD-Bench: How Close Are We to Determining Crystal Structures from Powder Diffraction?</papertitle>
+                    </a>
+                    <br>
+                    Dongyeop Woo,
+                    <strong>Nofit Segal</strong>,
+                    Nayoung Kim,
+                    Minkyu Kim,
+                    Rafael Gomez-Bombarelli,
+                    Sungsoo Ahn
+                    <br>
+                    <em>Under review, 2026</em>
+                    <br>
+                    <a href="https://arxiv.org/abs/2610.16480">paper</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:20px;width:35%;vertical-align:middle">
+                    <img src="files/publications/atomsteer.png" style="width:100%;max-width:260px;height:auto" class="publication-image" onclick="openModal(this.src)">
+                  </td>
+                  <td style="padding:20px;width:65%;vertical-align:middle">
+                    <a href="https://arxiv.org/abs/2610.38517">
+                      <papertitle>AtomSteer: Test-Time Constraint Steering for Atomistic Generative Models</papertitle>
+                    </a>
+                    <br>
+                    Pengfei Cai*,
+                    Katharina J&auml;ger*,
+                    Utkarsh Utkarsh,
+                    <strong>Nofit Segal</strong>,
+                    Bowen Deng,
+                    Akshay Subramanian,
+                    Rafael Gomez-Bombarelli
+                    <br>
+                    <em>Under review, 2026</em>
+                    <br>
+                    <a href="https://arxiv.org/abs/2610.38517">paper</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:20px;width:35%;vertical-align:middle">
+                    <img src="files/publications/lattice_invariants.png" style="width:100%;max-width:260px;height:auto" class="publication-image" onclick="openModal(this.src)">
+                  </td>
+                  <td style="padding:20px;width:65%;vertical-align:middle">
+                    <a href="https://arxiv.org/abs/2607.21829">
+                      <papertitle>Learning Lattice Parameters from Powder X-Ray Diffraction Data Using Invariants</papertitle>
+                    </a>
+                    <br>
+                    Elyssa Hofgard,
+                    Kyucheol Min,
+                    <strong>Nofit Segal</strong>,
+                    David W. Mittan-Moreau,
+                    Aria Mansouri Tehrani,
+                    Vanessa Oklejas,
+                    Rafael Gomez-Bombarelli,
+                    Jigyasa Nigam,
+                    Daniel W. Paley,
+                    Aaron S. Brewster,
+                    Tess Smidt
+                    <br>
+                    <em>Acta Crystallographica Section A 2026</em>
+                    <br>
+                    <a href="https://arxiv.org/abs/2607.21829">paper</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:20px;width:35%;vertical-align:middle">
+                    <img src="files/publications/xrdiff.jpg" style="width:100%;max-width:260px;height:auto" class="publication-image" onclick="openModal(this.src)">
+                  </td>
+                  <td style="padding:20px;width:65%;vertical-align:middle">
+                    <a href="https://arxiv.org/abs/2606.14003">
+                      <papertitle>XRDiff: Crystal Structure Prediction from Powder X-Ray Diffraction Data Using Diffusion Models</papertitle>
+                    </a>
+                    <br>
+                    <strong>Nofit Segal</strong>,
+                    Akshay Subramanian,
+                    Mingda Li,
+                    Benjamin Kurt Miller,
+                    Rafael Gomez-Bombarelli
+                    <br>
+                    <em>npj Computational Materials 2026 (in revision)</em>
+                    <br>
+                    <a href="https://arxiv.org/abs/2606.14003">paper</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:20px;width:35%;vertical-align:middle">
+                    <img src="files/publications/atomistic_skills.png" style="width:100%;max-width:260px;height:auto" class="publication-image" onclick="openModal(this.src)">
+                  </td>
+                  <td style="padding:20px;width:65%;vertical-align:middle">
+                    <a href="https://arxiv.org/abs/2605.24002">
+                      <papertitle>Harnessing AtomisticSkills for Agentic Atomistic Research</papertitle>
+                    </a>
+                    <br>
+                    Bowen Deng, Bohan Li, Matthew Cox, Hoje Chun, Juno Nam, Artur Lyssenko, Sathya Edamadaka, Jurgis Ruza, Xiaochen Du,
+                    <strong>Nofit Segal</strong>,
+                    Jesus Diaz Sanchez, Mingrou Xie, Ty Perez, Yu Yao, Miguel Steiner, Sauradeep Majumdar, Charles B. Musgrave III, Anirban Chandra, Abhirup Patra, Detlef Hohl, Connor W. Coley, Ju Li, Rafael Gomez-Bombarelli
+                    <br>
+                    <em>Nature Machine Intelligence 2026 (in revision)</em>
+                    <br>
+                    <a href="https://arxiv.org/abs/2605.24002">paper</a>
+                    <p></p>
+                    <p><span style="color:gray">Developed the PXRD analysis skills.</span></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:20px;width:35%;vertical-align:middle">
+                    <img src="files/publications/xrd_gd.png" style="width:100%;max-width:260px;height:auto" class="publication-image" onclick="openModal(this.src)">
+                  </td>
+                  <td style="padding:20px;width:65%;vertical-align:middle">
+                    <a href="https://arxiv.org/abs/2512.04036">
+                      <papertitle>The Loss Landscape of Powder X-Ray Diffraction-Based Structure Optimization Is Too Rough for Gradient Descent</papertitle>
+                    </a>
+                    <br>
+                    <strong>Nofit Segal</strong>,
+                    Akshay Subramanian,
+                    Mingda Li,
+                    Benjamin Kurt Miller,
+                    Rafael Gomez-Bombarelli
+                    <br>
+                    <em>Digital Discovery 2026</em>
+                    <br>
+                    <em>AI for Accelerated Materials Design (AI4Mat), NeurIPS 2025 <span style="color:firebrick"> Oral Presentation </span></em>
+                    <br>
+                    <a href="https://arxiv.org/abs/2512.04036">paper</a> /
+                    <a href="https://github.com/learningmatter-mit/XRD-GD">code</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:20px;width:35%;vertical-align:middle">
+                    <img src="files/publications/matex.png" style="width:100%;max-width:260px;height:auto" class="publication-image" onclick="openModal(this.src)">
+                  </td>
+                  <td style="padding:20px;width:65%;vertical-align:middle">
+                    <a href="https://www.nature.com/articles/s41524-025-01808-x">
+                      <papertitle>Known Unknowns: Out-of-Distribution Property Prediction in Materials and Molecules</papertitle>
+                    </a>
+                    <br>
+                    <strong>Nofit Segal</strong>*,
+                    Aviv Netanyahu*,
+                    Kevin Greenman,
+                    Pulkit Agrawal,
+                    Rafael Gomez-Bombarelli
+                    <br>
+                    <em>npj Computational Materials 2025</em>
+                    <br>
+                    <em>AI for Accelerated Materials Design (AI4Mat), NeurIPS 2024 <span style="color:firebrick"> Spotlight Talk </span></em>
+                    <br>
+                    <em>Next-Generation AI-Catalyzed Scientific Workflow for Digital Materials Discovery Symposium, MRS Fall 2024</em>
+                    <br>
+                    <a href="https://www.nature.com/articles/s41524-025-01808-x">paper</a> /
+                    <a href="https://github.com/learningmatter-mit/matex">code</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:20px;width:35%;vertical-align:middle">
+                    <img src="files/publications/lanthanoid.png" style="width:100%;max-width:260px;height:auto" class="publication-image" onclick="openModal(this.src)">
+                  </td>
+                  <td style="padding:20px;width:65%;vertical-align:middle">
+                    <a href="https://pubs.rsc.org/en/content/articlepdf/2022/ma/d2ma00596d">
+                      <papertitle>Lanthanoid Coordination Compounds as Diverse Self-templating Agents towards Hierarchically Porous Fe&ndash;N&ndash;C Electrocatalysts</papertitle>
+                    </a>
+                    <br>
+                    Itamar Salton,
+                    Karina Ioffe,
+                    Tomer Y. Burshtein,
+                    Eliyahu M. Farber,
+                    Nicola M. Seraphim,
+                    <strong>Nofit Segal</strong>,
+                    David Eisenberg
+                    <br>
+                    <em>Materials Advances 2022</em>
+                    <br>
+                    <a href="https://pubs.rsc.org/en/content/articlepdf/2022/ma/d2ma00596d">paper</a>
+                  </td>
+                </tr>
+              </table>
+            </td></tr>
+        </tbody></table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr><td>
+              <heading>Workshop Papers</heading>
+              <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                <tr>
+                  <td style="padding:20px;width:35%;vertical-align:middle">
+                  </td>
+                  <td style="padding:20px;width:65%;vertical-align:middle">
+                    <papertitle>MLIP Embeddings Predict Extraordinary Materials</papertitle>
+                    <br>
+                    Luis Carretero L&oacute;pez,
+                    <strong>Nofit Segal</strong>,
+                    Sathya Edamadaka,
+                    Rafael Gomez-Bombarelli
+                    <br>
+                    <em>Representations for the Physical Sciences (RPS), NeurIPS 2026 <span style="color:firebrick"> Spotlight Talk </span></em>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:20px;width:35%;vertical-align:middle">
+                  </td>
+                  <td style="padding:20px;width:65%;vertical-align:middle">
+                    <papertitle>Self-Supervised Pretraining for Instrument-Robust Representations of Scattering Data</papertitle>
+                    <br>
+                    Darin Merchant,
+                    <strong>Nofit Segal</strong>,
+                    Miguel Steiner,
+                    Rafael Gomez-Bombarelli
+                    <br>
+                    <em>Representations for the Physical Sciences (RPS), NeurIPS 2026</em>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:20px;width:35%;vertical-align:middle">
+                    <img src="files/publications/rl_mat.png" style="width:100%;max-width:260px;height:auto" class="publication-image" onclick="openModal(this.src)">
+                  </td>
+                  <td style="padding:20px;width:65%;vertical-align:middle">
+                    <a href="https://openreview.net/pdf?id=Hkr2OfTjAc">
+                      <papertitle>Towards Generating Stable Materials via Large Language Models with Reinforcement Learning Finetuning</papertitle>
+                    </a>
+                    <br>
+                    Zhang-Wei Hong*,
+                    <strong>Nofit Segal</strong>*,
+                    Aviv Netanyahu,
+                    Hoje Chun,
+                    Rafael Gomez-Bombarelli,
+                    Pulkit Agrawal
+                    <br>
+                    <em>The Reach and Limits of AI for Scientific Discovery (AI4Science), NeurIPS 2025</em>
+                    <br>
+                    <a href="https://openreview.net/pdf?id=Hkr2OfTjAc">paper</a>
+                  </td>
+                </tr>
+              </table>
+              <p style="font-size:small;color:gray">* Indicates equal contribution</p>
+            </td></tr>
+        </tbody></table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="padding:0px">
+              <br>
+              <p style="text-align:right;font-size:small;">
+                Site based on this <a href="https://github.com/jonbarron/jonbarron.github.io">template</a>.
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+      </td>
+    </tr>
+  </tbody></table>
+</body>
+
+</html>
